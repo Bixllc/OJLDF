@@ -3,15 +3,11 @@
 import * as React from "react";
 import Image from "next/image";
 import {
-  addDays,
   addMonths,
   endOfMonth,
-  endOfWeek,
   format,
   isSameMonth,
   isToday,
-  startOfMonth,
-  startOfWeek,
   subMonths,
 } from "date-fns";
 import {
@@ -19,73 +15,26 @@ import {
   ChevronLeft,
   ChevronRight,
   Clock,
-  MapPin,
-  Users,
   Video,
   X,
 } from "lucide-react";
 
-/* -------------------------------------------------------------------------- */
-/*                                   Types                                    */
-/* -------------------------------------------------------------------------- */
-
-type EventType = "broadcast" | "in-person" | "community";
-
-type EventLink = {
-  label: string;
-  url: string;
-  kind?: "youtube" | "radio" | "rsvp" | "website";
-  primary?: boolean;
-};
-
-type Series = {
-  id: string;
-  title: string;
-  type: EventType;
-  time: string;
-
-  recurringRule: "weekly" | "monthly-last-saturday";
-  recurringDay?: number; // 0=Sun..6=Sat
-
-  platform?: string;
-  image?: string;
-
-  defaultDescription?: string;
-  defaultLinks?: EventLink[];
-};
-
-type Episode = {
-  seriesId: string;
-  date: Date; // specific date
-  title?: string;
-  time?: string;
-  description?: string;
-  agenda?: string[];
-  links?: EventLink[];
-};
-
-type ResolvedEvent = {
-  id: string; // unique per date occurrence
-  seriesId: string;
-  date: Date;
-
-  title: string;
-  type: EventType;
-  time: string;
-
-  platform?: string;
-  image?: string;
-
-  description?: string;
-  agenda?: string[];
-  links?: EventLink[];
-};
+import {
+  SERIES,
+  daysOfWeek,
+  getCalendarDays,
+  nextWeeklyOccurrences,
+  resolveEventsForDate,
+  resolveEvent,
+  isLastSaturdayOfMonth,
+  type EventLink,
+  type EventType,
+  type ResolvedEvent,
+} from "../../lib/events-data";
 
 /* -------------------------------------------------------------------------- */
 /*                                   Utils                                    */
 /* -------------------------------------------------------------------------- */
-
-const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
 function cn(...classes: Array<string | undefined | false | null>) {
   return classes.filter(Boolean).join(" ");
@@ -123,193 +72,19 @@ function getLinkButtonClass(kind?: EventLink["kind"]) {
   }
 }
 
-function sameDay(a: Date, b: Date) {
-  return (
-    a.getFullYear() === b.getFullYear() &&
-    a.getMonth() === b.getMonth() &&
-    a.getDate() === b.getDate()
-  );
-}
-
-function isLastSaturdayOfMonth(date: Date) {
-  if (date.getDay() !== 6) return false;
-  const nextWeek = addDays(date, 7);
-  return nextWeek.getMonth() !== date.getMonth();
-}
-
-function getCalendarDays(currentDate: Date) {
-  const monthStart = startOfMonth(currentDate);
-  const monthEnd = endOfMonth(currentDate);
-  const gridStart = startOfWeek(monthStart, { weekStartsOn: 0 });
-  const gridEnd = endOfWeek(monthEnd, { weekStartsOn: 0 });
-
-  const days: Date[] = [];
-  let day = gridStart;
-  while (day <= gridEnd) {
-    days.push(day);
-    day = addDays(day, 1);
+function openLink(url: string) {
+  if (url.startsWith("http")) {
+    window.open(url, "_blank", "noopener,noreferrer");
+  } else {
+    window.location.href = url;
   }
-  return { monthStart, days };
 }
 
-/* -------------------------------------------------------------------------- */
-/*                               Data: Series + Episodes                      */
-/* -------------------------------------------------------------------------- */
-
-const SERIES: Series[] = [
-  {
-    id: "come-reason-wed",
-    title: "Come Reason With Rattigan",
-    type: "broadcast",
-    time: "8:00 PM EST",
-    recurringRule: "weekly",
-    recurringDay: 3, // Wed
-    platform: "YouTube Live / Reggae Global",
-    image: "/come-reason.png",
-    defaultDescription: "Weekly community broadcast.",
-    defaultLinks: [
-      {
-        label: "Watch on YouTube (Channel)",
-        url: "https://www.youtube.com/@OJLDF",
-        kind: "youtube",
-        primary: true,
-      },
-      {
-        label: "Listen on Reggae Global Radio",
-        url: "https://reggaeglobalradio.com",
-        kind: "radio",
-      },
-    ],
-  },
-  {
-    id: "reason-sat",
-    title: "Reason with Rattigan (Saturday)",
-    type: "broadcast",
-    time: "3:00 PM EST",
-    recurringRule: "weekly",
-    recurringDay: 6, // Sat
-    platform: "YouTube Live",
-    image: "/reason-rattigan.png",
-    defaultDescription: "Saturday show.",
-    defaultLinks: [
-      {
-        label: "Watch on YouTube (Channel)",
-        url: "https://www.youtube.com/@OJLDF",
-        kind: "youtube",
-        primary: true,
-      },
-    ],
-  },
-];
-
-/**
- * Episodes start from Jan 10, 2026.
- * Add/modify entries weekly with the correct agenda + specific YouTube live links.
- * If an episode isn't listed for a date, the UI will show "Agenda will be posted soon"
- * and will fall back to default links for that series.
- */
-const EPISODES: Episode[] = [
-  // Jan 10, 2026 (Saturday)
-  {
-    seriesId: "reason-sat",
-    date: new Date(2026, 0, 10),
-    title: "Reason with Rattigan",
-    description: "Weekly Saturday discussion with community updates and Q&A.",
-    agenda: ["IS THE GOVERNMENT COVERING UP THE TRUE MURDER RATE?", "WHY SHOULD THE PEOPLE TRUST THE GOVERNMENT AND JPS?", "IS THE GOVERNMENT INVOLVED IN THE RIGGING OF THE UPCOMING DIASPORA ELECTION?", "Live Q&A"],
-    links: [
-      {
-        label: "Watch this episode on YouTube",
-        url: "https://www.youtube.com/@reasonwithrattigan",
-        kind: "youtube",
-        primary: true,
-      },
-    ],
-  },
-  {
-    seriesId: "reason-sat",
-    date: new Date(2026, 0, 17),
-    title: "Reason With Rattigan",
-    description: "Weekly Saturday discussion with community updates and Q&A.",
-    agenda: ["THE AUDITOR GENERAL'S REPORT ON THE UHWI: VICTIMIZATION OF THE PUBLIC", "HUNTER V. TUFTON: A SLAM DUNK CASE", "AMBASSADOR WARD: MY JOURNEY WITH A GIANT", "THE DIASPORA ELECTION: THE GOVERNMENT CAN'T FOOL THE PEOPLE THIS TIME", "MINISTER VAZ AND THE JPS: BETRAYAL OF THE JAMAICAN PEOPLE (ELECTRICITY AND SCHOOL BUSES)", "THE GOJ'S MISUNDERSTANDING OF ALLIES, FRIENDS, AND INTERESTS", "ODPEM: THE POLITICIZATION OF ITS ADMINISTRATION AND ASSISTANCE"],
-    links: [
-      { label: "YouTube Live (Episode Link)", url: "https://www.youtube.com/@ojldf", kind: "youtube", primary: true },
-      { label: "Reggae Global Stream", url: "https://reggaeglobalradio.com/stream", kind: "radio" },
-    ],
-  },
-  {
-    seriesId: "reason-sat",
-    date: new Date(2026, 0, 24),
-    title: "Reason With Rattigan",
-    description: "Weekly Saturday discussion with community updates and Q&A.",
-    agenda: ["SHIFTING SHORELINE: THE PIRATES OF BLACK RIVER AND THE SAND MAFIA", "UNACCOUNTED MOROCCAN FERTILIZER: THE AUDITOR GENERAL'S BOLD MOVE", "FINANCIAL SCANDAL AT THE UHWI: ANOTHER 9-DAY WONDER?", "DIASPORA ELECTION: SIGNIFICANT EVIDENCE OF ELECTION MANIPULATION"],
-    links: [
-      { label: "YouTube Live (Episode Link)", url: "https://www.youtube.com/@ojldf", kind: "youtube", primary: true },
-      { label: "Reggae Global Stream", url: "https://reggaeglobalradio.com/stream", kind: "radio" },
-    ],
-  },
-  {
-    seriesId: "come-reason-wed",
-    date: new Date(2026, 1, 1),
-    title: "Reason With Rattigan",
-    description: "Weekly Saturday discussion with community updates and Q&A.",
-    agenda: ["MINISTER TUFTON AND THE UHWI SCANDAL: DIALYSIS MACHINES AND COMPANY 2","ATTORNEY RATTIGAN IS BARRED FROM PARTICIPATING IN THE DIASPORA ELECTION - TIMELINE AND FACTS", "CIVICS 101: PARLIAMENTARY PROCEDURES (POINT OF ORDER, ETC.)"],
-    links: [
-      { label: "YouTube Live (Episode Link)", url: "https://www.youtube.com/@ojldf", kind: "youtube", primary: true },
-      { label: "Reggae Global Stream", url: "https://reggaeglobalradio.com/stream", kind: "radio" },
-    ],
-  },
-];
-
-function findEpisode(seriesId: string, date: Date) {
-  return EPISODES.find((e) => e.seriesId === seriesId && sameDay(e.date, date));
-}
-
-function resolveEventsForDate(date: Date): ResolvedEvent[] {
-  const results: ResolvedEvent[] = [];
-
-  for (const s of SERIES) {
-    if (s.recurringRule === "weekly" && typeof s.recurringDay === "number") {
-      if (date.getDay() !== s.recurringDay) continue;
-
-      const ep = findEpisode(s.id, date);
-
-      results.push({
-        id: `${s.id}-${format(date, "yyyy-MM-dd")}`,
-        seriesId: s.id,
-        date,
-        title: ep?.title ?? s.title,
-        type: s.type,
-        time: ep?.time ?? s.time,
-        platform: s.platform,
-        image: s.image,
-        description: ep?.description ?? s.defaultDescription,
-        agenda: ep?.agenda,
-        links: ep?.links ?? s.defaultLinks,
-      });
-    }
-
-    if (s.recurringRule === "monthly-last-saturday") {
-      if (!isLastSaturdayOfMonth(date)) continue;
-
-      const ep = findEpisode(s.id, date);
-
-      results.push({
-        id: `${s.id}-${format(date, "yyyy-MM-dd")}`,
-        seriesId: s.id,
-        date,
-        title: ep?.title ?? s.title,
-        type: s.type,
-        time: ep?.time ?? s.time,
-        platform: s.platform,
-        image: s.image,
-        description: ep?.description ?? s.defaultDescription,
-        agenda: ep?.agenda,
-        links: ep?.links ?? s.defaultLinks,
-      });
-    }
-  }
-
-  return results;
+function openPrimaryLink(event: ResolvedEvent) {
+  const primary =
+    event.links?.find((l) => l.primary)?.url ?? event.links?.[0]?.url;
+  if (!primary) return;
+  openLink(primary);
 }
 
 /* -------------------------------------------------------------------------- */
@@ -342,14 +117,14 @@ function Button({
   size = "default",
   className,
   ...props
-}: React.ButtonHTMLAttributes<HTMLButtonElement>
- & {
+}: React.ButtonHTMLAttributes<HTMLButtonElement> & {
   variant?: "solid" | "outline";
   size?: "default" | "icon";
 }) {
   const base =
     "inline-flex items-center justify-center font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none";
-  const sizes = size === "icon" ? "h-10 w-10 rounded-xl" : "h-10 px-4 rounded-xl";
+  const sizes =
+    size === "icon" ? "h-10 w-10 rounded-xl" : "h-10 px-4 rounded-xl";
   const variants =
     variant === "outline"
       ? "border border-gray-200 bg-white hover:bg-gray-50 focus:ring-gray-200"
@@ -417,7 +192,9 @@ function Modal({
       />
       <div className="absolute left-1/2 top-1/2 w-[92vw] max-w-lg -translate-x-1/2 -translate-y-1/2 rounded-2xl bg-white p-5 shadow-2xl">
         <div className="flex items-start justify-between gap-4">
-          <div className="min-w-0">{title && <h3 className="text-xl font-bold">{title}</h3>}</div>
+          <div className="min-w-0">
+            {title && <h3 className="text-xl font-bold">{title}</h3>}
+          </div>
           <button
             type="button"
             onClick={onClose}
@@ -451,42 +228,40 @@ export default function EventsPage() {
   const nextMonth = () => setCurrentDate((d) => addMonths(d, 1));
   const goToToday = () => setCurrentDate(new Date());
 
-  const openPrimaryLink = (event: ResolvedEvent) => {
-    const primary = event.links?.find((l) => l.primary)?.url ?? event.links?.[0]?.url;
-    if (!primary) return;
-
-    if (primary.startsWith("http")) {
-      window.open(primary, "_blank", "noopener,noreferrer");
-    } else {
-      window.location.href = primary;
-    }
-  };
-
-  // For list view: show episodes from Jan 10, 2026 onward, plus any future generated occurrences.
-  // Simple approach: list only the explicit EPISODES, sorted.
-  const episodeList: ResolvedEvent[] = React.useMemo(() => {
+  /**
+   * List view:
+   * Show next 12 occurrences per weekly series from today (auto)
+   * plus monthly rule support if ever used.
+   */
+  const upcomingList: ResolvedEvent[] = React.useMemo(() => {
+    const from = new Date();
     const items: ResolvedEvent[] = [];
 
-    for (const ep of EPISODES) {
-      const series = SERIES.find((s) => s.id === ep.seriesId);
-      if (!series) continue;
+    for (const s of SERIES) {
+      if (s.recurringRule === "weekly") {
+        const dates = nextWeeklyOccurrences(s, from, 12);
+        for (const d of dates) items.push(resolveEvent(s, d));
+      }
 
-      items.push({
-        id: `${series.id}-${format(ep.date, "yyyy-MM-dd")}`,
-        seriesId: series.id,
-        date: ep.date,
-        title: ep.title ?? series.title,
-        type: series.type,
-        time: ep.time ?? series.time,
-        platform: series.platform,
-        image: series.image,
-        description: ep.description ?? series.defaultDescription,
-        agenda: ep.agenda,
-        links: ep.links ?? series.defaultLinks,
-      });
+      if (s.recurringRule === "monthly-last-saturday") {
+        const results: Date[] = [];
+        let cursor = new Date(from.getFullYear(), from.getMonth(), 1);
+        while (results.length < 6) {
+          const monthEnd = endOfMonth(cursor);
+          let day = monthEnd;
+          while (day.getMonth() === cursor.getMonth()) {
+            if (isLastSaturdayOfMonth(day)) {
+              results.push(new Date(day));
+              break;
+            }
+            day = new Date(day.getFullYear(), day.getMonth(), day.getDate() - 1);
+          }
+          cursor = addMonths(cursor, 1);
+        }
+        for (const d of results) items.push(resolveEvent(s, d));
+      }
     }
 
-    // Sort by date ascending
     items.sort((a, b) => a.date.getTime() - b.date.getTime());
     return items;
   }, []);
@@ -621,6 +396,9 @@ export default function EventsPage() {
                           >
                             <span className="hidden md:inline">{event.time.split(" ")[0]} </span>
                             {event.title}
+                            {event.agendaPending ? (
+                              <span className="ml-2 opacity-70">• Agenda soon</span>
+                            ) : null}
                           </button>
                         ))}
                       </div>
@@ -632,11 +410,20 @@ export default function EventsPage() {
           </Card>
         ) : (
           <div className="space-y-8">
-            <h2 className="text-2xl font-bold">Episodes (starting Jan 10, 2026)</h2>
+            <div className="flex items-end justify-between gap-4">
+              <div>
+                <h2 className="text-2xl font-bold">Upcoming Episodes</h2>
+                <p className="mt-1 text-sm text-gray-600">
+                  Recurring shows appear automatically. Add an episode entry when you have the agenda + live link.
+                </p>
+              </div>
+            </div>
 
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {episodeList.map((event) => {
-                const badgeClass = "bg-[#00843D] text-white";
+              {upcomingList.map((event) => {
+                const badgeClass = event.agendaPending
+                  ? "bg-gray-900 text-white"
+                  : "bg-[#00843D] text-white";
 
                 return (
                   <Card
@@ -644,18 +431,31 @@ export default function EventsPage() {
                     className="overflow-hidden border border-gray-200 transition-shadow hover:shadow-lg"
                   >
                     <div className="relative h-48 overflow-hidden">
-                      <ImageWithFallback src={event.image} alt={event.title} className="h-full w-full" />
-                      <span className={cn("absolute right-3 top-3 rounded-full px-3 py-1 text-xs font-bold", badgeClass)}>
-                        Episode
+                      <ImageWithFallback
+                        src={event.image}
+                        alt={event.title}
+                        className="h-full w-full"
+                      />
+                      <span
+                        className={cn(
+                          "absolute right-3 top-3 rounded-full px-3 py-1 text-xs font-bold",
+                          badgeClass
+                        )}
+                      >
+                        {event.agendaPending ? "Agenda Soon" : "Scheduled"}
                       </span>
                     </div>
 
                     <CardContent>
                       <h3 className="mb-2 text-lg font-bold">{event.title}</h3>
-                      <p className="mb-3 text-sm text-gray-600">{format(event.date, "MMMM d, yyyy")}</p>
+                      <p className="mb-3 text-sm text-gray-600">
+                        {format(event.date, "MMMM d, yyyy")}
+                      </p>
 
                       {event.description && (
-                        <p className="mb-4 text-sm text-gray-600 line-clamp-2">{event.description}</p>
+                        <p className="mb-4 text-sm text-gray-600 line-clamp-2">
+                          {event.description}
+                        </p>
                       )}
 
                       <div className="mb-4 space-y-2 text-sm text-gray-600">
@@ -685,10 +485,19 @@ export default function EventsPage() {
       </div>
 
       {/* Event Details Modal */}
-      <Modal open={!!selectedEvent} onClose={() => setSelectedEvent(null)} title={selectedEvent?.title}>
+      <Modal
+        open={!!selectedEvent}
+        onClose={() => setSelectedEvent(null)}
+        title={selectedEvent?.title}
+      >
         {selectedEvent && (
           <div className="space-y-4">
-            <div className={cn("inline-flex w-fit items-center rounded-full px-2.5 py-0.5 text-xs font-semibold", getEventBg(selectedEvent.type))}>
+            <div
+              className={cn(
+                "inline-flex w-fit items-center rounded-full px-2.5 py-0.5 text-xs font-semibold",
+                getEventBg(selectedEvent.type)
+              )}
+            >
               {selectedEvent.type === "broadcast"
                 ? "Broadcast"
                 : selectedEvent.type === "in-person"
@@ -696,11 +505,17 @@ export default function EventsPage() {
                 : "Community Event"}
             </div>
 
-            <p className="text-sm text-gray-600">{format(selectedEvent.date, "EEEE, MMMM d, yyyy")}</p>
+            <p className="text-sm text-gray-600">
+              {format(selectedEvent.date, "EEEE, MMMM d, yyyy")}
+            </p>
 
             {selectedEvent.image && (
               <div className="h-48 w-full overflow-hidden rounded-xl">
-                <ImageWithFallback src={selectedEvent.image} alt={selectedEvent.title} className="h-full w-full" />
+                <ImageWithFallback
+                  src={selectedEvent.image}
+                  alt={selectedEvent.title}
+                  className="h-full w-full"
+                />
               </div>
             )}
 
@@ -747,13 +562,7 @@ export default function EventsPage() {
                   <button
                     key={link.url}
                     type="button"
-                    onClick={() => {
-                      if (link.url.startsWith("http")) {
-                        window.open(link.url, "_blank", "noopener,noreferrer");
-                      } else {
-                        window.location.href = link.url;
-                      }
-                    }}
+                    onClick={() => openLink(link.url)}
                     className={cn(
                       "inline-flex w-full items-center justify-center rounded-xl px-4 py-2 text-sm font-semibold",
                       getLinkButtonClass(link.kind)
@@ -769,28 +578,11 @@ export default function EventsPage() {
               <Button variant="outline" onClick={() => setSelectedEvent(null)}>
                 Close
               </Button>
-              <Button onClick={() => openPrimaryLink(selectedEvent)}>
-                Open
-              </Button>
+              <Button onClick={() => openPrimaryLink(selectedEvent)}>Open</Button>
             </div>
           </div>
         )}
       </Modal>
     </div>
   );
-}
-
-/* -------------------------------------------------------------------------- */
-/*                            Missing Helper Fix                              */
-/* -------------------------------------------------------------------------- */
-
-function openPrimaryLink(event: ResolvedEvent) {
-  const primary = event.links?.find((l) => l.primary)?.url ?? event.links?.[0]?.url;
-  if (!primary) return;
-
-  if (primary.startsWith("http")) {
-    window.open(primary, "_blank", "noopener,noreferrer");
-  } else {
-    window.location.href = primary;
-  }
 }
