@@ -135,38 +135,30 @@ export default function Hero() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#00843D] to-[#009B3A]">
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <section
+        className="relative overflow-hidden"
+        style={{
+          background: 'linear-gradient(to right, rgba(22,101,52,0.92) 0%, rgba(22,101,52,0.92) 35%, rgba(22,101,52,0.15) 100%)',
+        }}
+      >
+        <div className="relative z-10 max-w-7xl mx-auto" style={{ padding: '3.5rem 2.5rem' }}>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-10 lg:py-16">
             {/* Left Content */}
             <div className="text-white space-y-8">
-              <h1 className="font-bold leading-[1.1] text-[3.25rem] sm:text-[3.5rem]">
+              {/* Yellow Rule */}
+              <div style={{ width: 40, height: 3, backgroundColor: '#EAB308' }} />
+
+              <h1 className="font-playfair font-bold leading-[1.1] text-[3.25rem] sm:text-[3.5rem] lg:text-[4rem]">
                 One Jamaica
                 <span className="block text-[#FCD116]">Legal Defense Foundation</span>
               </h1>
 
-              <p className="text-lg sm:text-xl leading-[1.7] text-white/95 max-w-xl">
+              <p className="text-lg sm:text-xl leading-[1.7] max-w-xl font-light" style={{ color: 'rgba(255,255,255,0.70)' }}>
                 Committed to protecting justice and equality for everyone - especially individuals
                 who have been wrongfully accused, marginalized, or deprived of fair legal representation.
                 We believe every person deserves the opportunity to defend their rights, regardless
                 of their financial circumstances.
               </p>
-
-              {/* Quick Stats */}
-              <div className="grid grid-cols-3 gap-4 py-6 max-w-xl">
-                <div className="border-l-4 border-[#FCD116] pl-4">
-                  <div className="text-[2rem] font-bold leading-none">20K+</div>
-                  <div className="text-white/80 mt-1">Subscribers</div>
-                </div>
-                <div className="border-l-4 border-[#FCD116] pl-4">
-                  <div className="text-[2rem] font-bold leading-none">500+</div>
-                  <div className="text-white/80 mt-1">Persons Helped</div>
-                </div>
-                <div className="border-l-4 border-[#FCD116] pl-4">
-                  <div className="text-[2rem] font-bold leading-none">2+</div>
-                  <div className="text-white/80 mt-1">Years</div>
-                </div>
-              </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <button
@@ -214,14 +206,26 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Bottom Wave */}
-        <div className="absolute bottom-0 left-0 right-0 z-0">
-          <svg viewBox="0 0 1440 120" className="w-full">
-            <path
-              d="M0 0L60 10C120 20 240 40 360 46.7C480 53 600 47 720 43.3C840 40 960 40 1080 46.7C1200 53 1320 67 1380 73.3L1440 80V120H0V0Z"
-              fill="white"
-            />
-          </svg>
+        {/* Stats Bar — pinned to bottom */}
+        <div style={{ backgroundColor: 'rgba(6,52,27,0.85)' }}>
+          <div className="max-w-7xl mx-auto px-6 lg:px-10">
+            <div className="grid grid-cols-3 divide-x divide-white/20">
+              {[
+                { value: '20K+', label: 'Subscribers' },
+                { value: '500+', label: 'Persons Helped' },
+                { value: '2+', label: 'Years' },
+              ].map((stat) => (
+                <div key={stat.label} className="py-5 px-6 text-center sm:text-left">
+                  <div className="text-[1.75rem] sm:text-[2rem] font-bold leading-none text-[#FCD116]">
+                    {stat.value}
+                  </div>
+                  <div className="text-[0.7rem] sm:text-xs uppercase tracking-widest mt-1" style={{ color: 'rgba(255,255,255,0.60)' }}>
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 

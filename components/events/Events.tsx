@@ -271,7 +271,7 @@ export default function EventsPage() {
       {/* Top bar */}
       <div className="mx-auto max-w-7xl px-4 pt-6 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between gap-3">
-          <h1 className="text-3xl font-extrabold tracking-tight text-gray-900">Events</h1>
+          <h1 className="font-playfair text-3xl font-extrabold tracking-tight text-gray-900">Events</h1>
 
           <div className="inline-flex rounded-xl border border-gray-200 bg-white p-1">
             <button

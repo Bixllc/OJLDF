@@ -132,7 +132,7 @@ export default function GetInvolved() {
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl text-center">
-            <h1 className="mb-6 text-5xl font-extrabold">Join the Fight for Justice</h1>
+            <h1 className="mb-6 font-playfair text-5xl font-extrabold">Join the Fight for Justice</h1>
             <p className="mb-4 text-2xl leading-relaxed">How You Can Get Involved</p>
           </div>
         </div>
@@ -141,7 +141,7 @@ export default function GetInvolved() {
       {/* Intro */}
       <section className="bg-white py-16">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-          <h2 className="mb-6 text-3xl font-extrabold">GET INVOLVED</h2>
+          <h2 className="mb-6 font-playfair text-3xl font-extrabold">GET INVOLVED</h2>
           <p className="text-gray-700" style={{ fontSize: "1.125rem", lineHeight: "1.8" }}>
             At the One Jamaica Legal Defense Foundation (OJLD), we believe that everyone
             can play a role in advancing justice and equality. Whether you have time,
@@ -191,7 +191,7 @@ export default function GetInvolved() {
       {/* Impact */}
       <section className="bg-white py-16">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-          <h2 className="mb-6 text-3xl font-extrabold">Every Contribution Matters</h2>
+          <h2 className="mb-6 font-playfair text-3xl font-extrabold">Every Contribution Matters</h2>
           <p className="mb-8 text-gray-700" style={{ fontSize: "1.125rem", lineHeight: "1.8" }}>
             Whether you donate, volunteer, advocate, or educate, your involvement directly
             impacts lives and strengthens our fight for justice. Together, we can build a

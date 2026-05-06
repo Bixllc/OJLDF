@@ -74,7 +74,7 @@ export default function UpcomingEvents() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-end justify-between gap-6 mb-12">
           <div>
-            <h2 className="mb-2 text-3xl md:text-4xl font-bold text-gray-900">Upcoming Events</h2>
+            <h2 className="mb-2 font-playfair text-3xl md:text-4xl font-bold text-gray-900">Upcoming Events</h2>
             <p className="text-gray-600">
               Join us for our latest community programs and broadcasts
             </p>

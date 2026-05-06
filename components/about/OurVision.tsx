@@ -19,7 +19,7 @@ export default function OurVision() {
           </div>
 
           {/* Heading */}
-          <h2 className="mb-8 text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
+          <h2 className="mb-8 font-playfair text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
             A World Where Justice is Truly Blind
           </h2>
 

@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
             <div>
-              <h3 className="text-white mb-1 text-2xl font-bold">Support Our Mission</h3>
+              <h3 className="font-playfair text-white mb-1 text-2xl font-bold">Support Our Mission</h3>
               <p className="text-white/90 max-w-3xl">
                 Support justice and equality with OJLDF. Donate, volunteer, or spread awareness today.
                 Stand up for those who need it most. Act now!

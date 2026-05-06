@@ -9,7 +9,7 @@ export default function JoinUs() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Text */}
           <div>
-            <h2 className="mb-6 text-3xl sm:text-4xl font-bold tracking-tight">
+            <h2 className="mb-6 font-playfair text-3xl sm:text-4xl font-bold tracking-tight">
               Join Us in Making a Difference
             </h2>
 

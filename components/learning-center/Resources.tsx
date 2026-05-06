@@ -500,7 +500,7 @@ export default function Resources({ onNavigate }: LearningCenterProps) {
       {/* Categories */}
       <section className="bg-gray-50 py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="mb-12 text-center text-2xl font-bold">
+          <h2 className="mb-12 text-center font-playfair text-2xl font-bold">
             Browse by Category
           </h2>
 
@@ -551,7 +551,7 @@ export default function Resources({ onNavigate }: LearningCenterProps) {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-10 flex items-start justify-between gap-4">
             <div>
-              <h2 className="text-3xl font-bold">
+              <h2 className="font-playfair text-3xl font-bold">
                 {selectedCategory ? selectedCategory : "All Resources"}
               </h2>
               <p className="mt-2 text-gray-600">

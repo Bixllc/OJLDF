@@ -37,7 +37,7 @@ export default function Contact() {
       {/* Hero */}
       <section className="bg-gradient-to-br from-[#00843D] to-[#009B3A] py-20 text-white">
         <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
-          <h1 className="mb-6 text-5xl font-extrabold">Get In Touch</h1>
+          <h1 className="mb-6 font-playfair text-5xl font-extrabold">Get In Touch</h1>
           <p className="mx-auto max-w-2xl text-lg leading-relaxed text-white/90 sm:text-xl">
             Have questions? Need support? Reach out and we’ll respond as soon as
             possible.

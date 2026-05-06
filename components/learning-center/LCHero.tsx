@@ -15,7 +15,7 @@ export default function AboutHero() {
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-5xl text-center">
-            <h1 className="mb-6 text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+            <h1 className="mb-6 font-playfair text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
               Learning Center
             </h1>
 

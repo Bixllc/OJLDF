@@ -171,7 +171,7 @@ export default function Memberships() {
       {/* Hero */}
       <section className="bg-gradient-to-br from-[#00843D] to-[#009B3A] py-20 text-white">
         <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
-          <h1 className="mb-6 text-5xl font-extrabold">Coming Soon</h1>
+          <h1 className="mb-6 font-playfair text-5xl font-extrabold">Coming Soon</h1>
           <p className="mx-auto max-w-3xl text-lg leading-relaxed text-white/90 sm:text-xl">
             Stay tuned to hear when it launches
           </p>
@@ -267,7 +267,7 @@ export default function Memberships() {
       <section className="bg-white py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-12 text-center">
-            <h2 className="mb-4 text-4xl font-extrabold">Membership Benefits</h2>
+            <h2 className="mb-4 font-playfair text-4xl font-extrabold">Membership Benefits</h2>
             <p className="mx-auto max-w-2xl text-gray-600">
               Every membership level provides valuable support and resources
               tailored to your needs

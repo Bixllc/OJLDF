@@ -29,7 +29,7 @@ export default function AboutMission() {
               <span className="font-medium text-[#00843D]">Our Mission</span>
             </div>
 
-            <h2 className="mb-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            <h2 className="mb-4 font-playfair text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Fighting for Justice and Equality
             </h2>
 

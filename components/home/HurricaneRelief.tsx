@@ -9,7 +9,7 @@ export default function HurricaneRelief() {
         {/* Header with Jamaica Heart */}
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-4 mb-6">
-            <h2 className="text-[#00843D] text-3xl md:text-4xl font-bold">
+            <h2 className="font-playfair text-[#00843D] text-3xl md:text-4xl font-bold">
               OJLDF stands with Jamaica
             </h2>
 

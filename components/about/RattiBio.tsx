@@ -5,7 +5,7 @@ export default function RattiBio() {
     <section id="founder" className="py-20 bg-white scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="mb-4 text-3xl sm:text-4xl font-bold tracking-tight">
+          <h2 className="mb-4 font-playfair text-3xl sm:text-4xl font-bold tracking-tight">
             Meet our Founder and President
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
@@ -31,7 +31,7 @@ export default function RattiBio() {
           {/* Right: content */}
           <div className="space-y-6">
             <div>
-              <h3 className="mb-4 text-3xl sm:text-4xl font-bold tracking-tight">
+              <h3 className="mb-4 font-playfair text-3xl sm:text-4xl font-bold tracking-tight">
                 Wilfred S. Rattigan
               </h3>
               <p className="text-gray-600 text-[1.0625rem] leading-[1.8]">
@@ -40,7 +40,7 @@ export default function RattiBio() {
             </div>
 
             <div>
-              <h3 className="mb-4 text-3xl sm:text-4xl font-bold tracking-tight">
+              <h3 className="mb-4 font-playfair text-3xl sm:text-4xl font-bold tracking-tight">
                 Professional Background 
               </h3>
               <p className="text-gray-600 text-[1.0625rem] leading-[1.8]">
@@ -49,7 +49,7 @@ export default function RattiBio() {
             </div>
 
             <div>
-              <h3 className="mb-4 text-3xl sm:text-4xl font-bold tracking-tight">
+              <h3 className="mb-4 font-playfair text-3xl sm:text-4xl font-bold tracking-tight">
                 FBI Career
               </h3>
               <p className="text-gray-600 mb-4 text-[1.0625rem] leading-[1.8]">
@@ -74,7 +74,7 @@ export default function RattiBio() {
             </div>
 
             <div>
-              <h3 className="mb-4 text-3xl sm:text-4xl font-bold tracking-tight">
+              <h3 className="mb-4 font-playfair text-3xl sm:text-4xl font-bold tracking-tight">
                 Client Services
               </h3>
               <p className="text-gray-600 text-[1.0625rem] leading-[1.8]">
@@ -83,7 +83,7 @@ export default function RattiBio() {
             </div>
 
             <div>
-              <h3 className="mb-4 text-3xl sm:text-4xl font-bold tracking-tight">
+              <h3 className="mb-4 font-playfair text-3xl sm:text-4xl font-bold tracking-tight">
                 Education and Legal Practice
               </h3>
               <p className="text-gray-600 text-[1.0625rem] leading-[1.8]">

@@ -21,7 +21,7 @@ export default function WhoWeAre() {
 
             <h2
               id="who-we-are-heading"
-              className="mb-6 text-3xl sm:text-4xl font-semibold tracking-tight text-gray-900"
+              className="mb-6 font-playfair text-3xl sm:text-4xl font-semibold tracking-tight text-gray-900"
             >
               Passionate Advocates for Change
             </h2>
