@@ -241,29 +241,28 @@ export default function Hero() {
 
               <div>
                 <div className="flex items-center gap-3 mb-1">
-                  {/* <span className="rounded-full bg-white px-3 py-1 text-xs font-bold text-red-600">
-                     🔴 LIVE NOW
-                  </span> */}
                   <span className="rounded-full bg-white px-3 py-1 text-xs font-bold text-red-600">
-                    WATCH THE RECAP
+                     🔴 LIVE NOW
                   </span>
-                  <h3 className="font-semibold">Come Reason With Rattigan</h3>
+                  <h3 className="font-semibold">Reason With Rattigan</h3>
                 </div>
-                <p className="text-white/90">Rattigan Ejected From GJDC? Pirates Of Black River: Shifting Sand & Shores AG & Moroccan Fertilizer
-</p>
+                <p className="text-white/90">&ldquo;Lies, Damned Lies, and Statistics&rdquo; &bull; Parliamentary Procedures: Ye Who Knoweth the &ldquo;Standing Orders&rdquo; Shall Serve the People Well</p>
               </div>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3">
-              {/* <button className="rounded-xl bg-white px-6 py-3 font-semibold text-red-600 shadow-lg hover:bg-gray-100">
-                <span className="inline-flex items-center">
-                  <Radio className="w-5 h-5 mr-2" />
-                  Reggae Global Radio
-                </span>
-              </button> */}
+              <a
+                href="https://reggaeglobalradio.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-xl bg-white px-6 py-3 font-semibold text-red-600 shadow-lg hover:bg-gray-100"
+              >
+                <Radio className="w-5 h-5 mr-2" />
+                Reggae Global Radio
+              </a>
 
              <a
-              href="https://www.youtube.com/live/abMvR-GjJfo?si=azCUsmNHIDBEjaB3"
+              href="https://www.youtube.com/@OJLDF"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-xl bg-white px-6 py-3 font-semibold text-red-600 shadow-lg hover:bg-gray-100"

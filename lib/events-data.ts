@@ -128,6 +128,36 @@ export const EPISODES: Episode[] = [
 
   {
     seriesId: "reason-sat",
+    date: new Date(2026, 4, 9), // May 9, 2026 (Sat)
+    published: true,
+    title: "Reason With Rattigan",
+    time: "3:00 PM NY / 2:00 PM JA",
+    agenda: [
+      '"Lies, Damned Lies, and Statistics"',
+      'Parliamentary Procedures: Ye Who Knoweth the "Standing Orders" Shall Serve the People Well',
+    ],
+    links: [
+      {
+        label: "Watch on YouTube",
+        url: "https://www.youtube.com/@OJLDF",
+        kind: "youtube",
+        primary: true,
+      },
+      {
+        label: "Listen on Reggae Global Radio",
+        url: "https://reggaeglobalradio.com",
+        kind: "radio",
+      },
+      {
+        label: "Newsletter",
+        url: "https://globaldigital.createsend1.com/t/d-e-sdjkytd-l-i/",
+        kind: "website",
+      },
+    ],
+  },
+
+  {
+    seriesId: "reason-sat",
     date: new Date(2026, 1, 28), // Feb 28, 2026 (Sat)
     published: true,
     agenda: [
