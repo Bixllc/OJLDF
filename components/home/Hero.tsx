@@ -246,7 +246,7 @@ export default function Hero() {
                   </span>
                   <h3 className="font-semibold">Reason With Rattigan</h3>
                 </div>
-                <p className="text-white/90">&ldquo;Lies, Damned Lies, and Statistics&rdquo; &bull; Parliamentary Procedures: Ye Who Knoweth the &ldquo;Standing Orders&rdquo; Shall Serve the People Well</p>
+                <p className="text-white/90">Should &ldquo;Patois&rdquo; Be Recognized in Parliament? &bull; Parliamentarians Disrupt Committee Meeting: &ldquo;Government Badness&rdquo; and Ignorance</p>
               </div>
             </div>
 
