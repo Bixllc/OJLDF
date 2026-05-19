@@ -242,7 +242,7 @@ export default function Hero() {
               <div>
                 <div className="flex items-center gap-3 mb-1">
                   <span className="rounded-full bg-white px-3 py-1 text-xs font-bold text-red-600">
-                     🔴 LIVE NOW
+                     🎬 WATCH THE RECAP
                   </span>
                   <h3 className="font-semibold">Reason With Rattigan</h3>
                 </div>
