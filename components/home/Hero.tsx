@@ -247,6 +247,11 @@ export default function Hero() {
                   <h3 className="font-semibold">Reason With Rattigan</h3>
                 </div>
                 <p className="text-white/90">Should &ldquo;Patois&rdquo; Be Recognized in Parliament? &bull; Parliamentarians Disrupt Committee Meeting: &ldquo;Government Badness&rdquo; and Ignorance</p>
+                <p className="mt-3 text-sm font-semibold text-yellow-300 uppercase leading-snug">
+                  ⚠️ Due to unforeseen circumstances, classes scheduled for May 23 and 30 have been postponed and rescheduled for June 6, 2026.
+                  <br />
+                  Please continue to study for the Final Exam which will be administered on June 6, 2026.
+                </p>
               </div>
             </div>
 
