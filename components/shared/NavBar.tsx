@@ -43,9 +43,14 @@ export default function NavBar({ currentPage, onNavigate }: NavbarProps) {
     <nav className="fixed left-0 right-0 top-0 z-50 bg-white shadow-sm">
       {/* Marquee Banner */}
       <div className="overflow-hidden bg-red-600 py-2 text-white">
-        <span className="animate-marquee font-bold text-sm">
-          We do not charge a fee to sign petitions&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We do not charge a fee to sign petitions&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We do not charge a fee to sign petitions
-        </span>
+        <div className="animate-marquee font-bold text-sm">
+          {Array.from({ length: 10 }).map((_, i) => (
+            <span key={i} className="px-12">OJLDF DOES NOT CHARGE A FEE TO SIGN PETITIONS</span>
+          ))}
+          {Array.from({ length: 10 }).map((_, i) => (
+            <span key={`dup-${i}`} className="px-12">OJLDF DOES NOT CHARGE A FEE TO SIGN PETITIONS</span>
+          ))}
+        </div>
       </div>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">

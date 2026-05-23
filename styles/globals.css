@@ -9,12 +9,13 @@ body {
 
 /* Marquee animation */
 @keyframes marquee {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 .animate-marquee {
-  animation: marquee 25s linear infinite;
+  animation: marquee 20s linear infinite;
   white-space: nowrap;
-  display: inline-block;
+  display: flex;
+  width: max-content;
 }
