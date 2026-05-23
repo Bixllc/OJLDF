@@ -42,7 +42,7 @@ export default function NavBar({ currentPage, onNavigate }: NavbarProps) {
   return (
     <nav className="fixed left-0 right-0 top-0 z-50 bg-white shadow-sm">
       {/* Marquee Banner */}
-      <div className="overflow-hidden bg-[#00843D] py-2 text-white">
+      <div className="overflow-hidden bg-red-600 py-2 text-white">
         <span className="animate-marquee font-bold text-sm">
           We do not charge a fee to sign petitions&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We do not charge a fee to sign petitions&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We do not charge a fee to sign petitions
         </span>
