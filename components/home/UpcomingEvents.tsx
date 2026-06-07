@@ -38,7 +38,7 @@ const events: EventItem[] = [
 function EventCard({ title, date, type, imageSrc, objectFit = 'cover', href }: EventItem) {
   const CardInner = (
     <div className="h-full flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-black/5 hover:shadow-lg transition-shadow">
-      <div className="relative h-64 w-full overflow-hidden flex-shrink-0">
+      <div className="relative h-64 w-full overflow-hidden flex-shrink-0 bg-black">
         <Image
           src={imageSrc}
           alt={title}
