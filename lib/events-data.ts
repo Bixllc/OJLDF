@@ -49,6 +49,7 @@ export type Episode = {
   description?: string;
   agenda?: string[];
   links?: EventLink[];
+  videoSrc?: string;
 };
 
 export type ResolvedEvent = {
@@ -66,6 +67,7 @@ export type ResolvedEvent = {
   description?: string;
   agenda?: string[];
   links?: EventLink[];
+  videoSrc?: string;
 
   agendaPending?: boolean;
 };
@@ -151,6 +153,7 @@ export const EPISODES: Episode[] = [
     title: "2nd Biennial Online Diaspora Conference — Day 1",
     time: "7:00 PM EDT / 6:00 PM JT",
     agenda: ["Seeing Reality — Shaping Our Future", "Come and Join the Conversation"],
+    videoSrc: "/diaspora-conference-promo.mp4",
   },
   {
     seriesId: "diaspora-conf-2026",
@@ -446,6 +449,7 @@ export function resolveEvent(series: Series, date: Date): ResolvedEvent {
     description: ep?.description ?? series.defaultDescription,
     agenda: agendaPending ? undefined : ep?.agenda,
     links: ep?.links ?? series.defaultLinks,
+    videoSrc: ep?.videoSrc,
     agendaPending,
   };
 }

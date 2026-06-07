@@ -5,8 +5,9 @@ type EventItem = {
   title: string;
   date: string;
   type: 'Online' | 'In Person';
-  imageSrc: string; 
-  href?: string; 
+  imageSrc: string;
+  objectFit?: 'cover' | 'contain';
+  href?: string;
 };
 
 const events: EventItem[] = [
@@ -29,26 +30,27 @@ const events: EventItem[] = [
     date: 'June 14–18, 2026 · 7pm EDT / 6pm JT',
     type: 'Online',
     imageSrc: '/diaspora-conference.png',
+    objectFit: 'contain',
     href: '/events',
   },
 ];
 
-function EventCard({ title, date, type, imageSrc, href }: EventItem) {
+function EventCard({ title, date, type, imageSrc, objectFit = 'cover', href }: EventItem) {
   const CardInner = (
-    <div className="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-black/5 hover:shadow-lg transition-shadow">
-      <div className="relative h-48 w-full overflow-hidden">
+    <div className="h-full flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-black/5 hover:shadow-lg transition-shadow">
+      <div className="relative h-64 w-full overflow-hidden flex-shrink-0">
         <Image
           src={imageSrc}
           alt={title}
           fill
-          className="object-cover"
+          className={objectFit === 'contain' ? 'object-contain' : 'object-cover'}
           sizes="(max-width: 768px) 100vw, 33vw"
         />
       </div>
 
-      <div className="p-6">
+      <div className="p-6 flex flex-col flex-1">
         <span
-          className="inline-flex items-center rounded-full px-3 py-1 text-sm font-medium mb-3"
+          className="inline-flex items-center rounded-full px-3 py-1 text-sm font-medium mb-3 w-fit"
           style={{
             backgroundColor: type === 'Online' ? '#00843D' : '#FCD116',
             color: type === 'Online' ? '#fff' : '#000',
@@ -66,7 +68,7 @@ function EventCard({ title, date, type, imageSrc, href }: EventItem) {
   // If you want the whole card clickable
   if (href) {
     return (
-      <a href={href} className="block focus:outline-none focus:ring-2 focus:ring-[#00843D]/40 rounded-2xl">
+      <a href={href} className="block h-full focus:outline-none focus:ring-2 focus:ring-[#00843D]/40 rounded-2xl">
         {CardInner}
       </a>
     );

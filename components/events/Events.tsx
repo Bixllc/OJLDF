@@ -509,7 +509,18 @@ export default function EventsPage() {
               {format(selectedEvent.date, "EEEE, MMMM d, yyyy")}
             </p>
 
-            {selectedEvent.image && (
+            {selectedEvent.videoSrc ? (
+              <div className="w-full overflow-hidden rounded-xl bg-black">
+                <video
+                  controls
+                  className="w-full aspect-video"
+                  preload="metadata"
+                  key={selectedEvent.videoSrc}
+                >
+                  <source src={selectedEvent.videoSrc} type="video/mp4" />
+                </video>
+              </div>
+            ) : selectedEvent.image ? (
               <div className="h-48 w-full overflow-hidden rounded-xl">
                 <ImageWithFallback
                   src={selectedEvent.image}
@@ -517,7 +528,7 @@ export default function EventsPage() {
                   className="h-full w-full"
                 />
               </div>
-            )}
+            ) : null}
 
             {selectedEvent.description && (
               <p className="text-base text-gray-700">{selectedEvent.description}</p>
