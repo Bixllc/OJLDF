@@ -14,14 +14,21 @@ const events: EventItem[] = [
     title: 'Come Reason With Rattigan',
     date: 'Every Wednesday 8pm–10pm EST',
     type: 'Online',
-    imageSrc: '/come-reason.png', 
-    href: '/events', // or a specific event page
+    imageSrc: '/come-reason.png',
+    href: '/events',
   },
   {
     title: 'Reason with Rattigan',
     date: 'Every Saturday 3pm–8pm EST',
     type: 'Online',
-    imageSrc: '/reason-rattigan.png', 
+    imageSrc: '/reason-rattigan.png',
+    href: '/events',
+  },
+  {
+    title: '2nd Biennial Online Diaspora Conference',
+    date: 'June 14–18, 2026 · 7pm EDT / 6pm JT',
+    type: 'Online',
+    imageSrc: '/diaspora-conference.png',
     href: '/events',
   },
 ];
@@ -92,9 +99,6 @@ export default function UpcomingEvents() {
           {events.map((event) => (
             <EventCard key={event.title} {...event} />
           ))}
-
-          {/* Keeps spacing similar to screenshot (2 cards, 3-col layout) */}
-          <div className="hidden md:block" />
         </div>
       </div>
     </section>

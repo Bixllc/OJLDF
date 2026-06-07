@@ -15,12 +15,12 @@ export default function Page() {
     <>
       <NavBar />;
       <Hero />;
+      <UpcomingEvents />;
       <HurricaneRelief />;
       <Stats />;
       <ImportantInitiatives />;
       <Serve />;
       <RecapComeReasonWithRattigan />;
-      <UpcomingEvents />;
       <Footer />;
     </>
   )

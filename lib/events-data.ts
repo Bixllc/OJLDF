@@ -28,7 +28,7 @@ export type Series = {
   type: EventType;
   time: string;
 
-  recurringRule: "weekly" | "monthly-last-saturday";
+  recurringRule: "weekly" | "monthly-last-saturday" | "none";
   recurringDay?: number; // 0=Sun..6=Sat
 
   platform?: string;
@@ -100,6 +100,25 @@ export const SERIES: Series[] = [
     ],
   },
   {
+    id: "diaspora-conf-2026",
+    title: "2nd Biennial Online Diaspora Conference",
+    type: "community",
+    time: "7:00 PM EDT / 6:00 PM JT",
+    recurringRule: "none",
+    platform: "YouTube Live — Reason With Rattigan",
+    image: "/diaspora-conference.png",
+    defaultDescription:
+      "Global Jamaica Diaspora Coalition presents the 2nd Biennial Online Diaspora Conference: Seeing Reality — Shaping Our Future. June 14–18, 2026.",
+    defaultLinks: [
+      {
+        label: "Watch on YouTube",
+        url: "https://www.youtube.com/@reasonwithrattigan",
+        kind: "youtube",
+        primary: true,
+      },
+    ],
+  },
+  {
     id: "reason-sat",
     title: "Reason with Rattigan (Saturday)",
     type: "broadcast",
@@ -122,9 +141,79 @@ export const SERIES: Series[] = [
 
 export const EPISODES: Episode[] = [
   // =====================
+  // 2nd Biennial Online Diaspora Conference — June 14–18, 2026
+  // =====================
+
+  {
+    seriesId: "diaspora-conf-2026",
+    date: new Date(2026, 5, 14), // June 14, 2026 (Sun)
+    published: true,
+    title: "2nd Biennial Online Diaspora Conference — Day 1",
+    time: "7:00 PM EDT / 6:00 PM JT",
+    agenda: ["Seeing Reality — Shaping Our Future", "Come and Join the Conversation"],
+  },
+  {
+    seriesId: "diaspora-conf-2026",
+    date: new Date(2026, 5, 15), // June 15, 2026 (Mon)
+    published: true,
+    title: "2nd Biennial Online Diaspora Conference — Day 2",
+    time: "7:00 PM EDT / 6:00 PM JT",
+  },
+  {
+    seriesId: "diaspora-conf-2026",
+    date: new Date(2026, 5, 16), // June 16, 2026 (Tue)
+    published: true,
+    title: "2nd Biennial Online Diaspora Conference — Day 3",
+    time: "7:00 PM EDT / 6:00 PM JT",
+  },
+  {
+    seriesId: "diaspora-conf-2026",
+    date: new Date(2026, 5, 17), // June 17, 2026 (Wed)
+    published: true,
+    title: "2nd Biennial Online Diaspora Conference — Day 4",
+    time: "7:00 PM EDT / 6:00 PM JT",
+  },
+  {
+    seriesId: "diaspora-conf-2026",
+    date: new Date(2026, 5, 18), // June 18, 2026 (Thu)
+    published: true,
+    title: "2nd Biennial Online Diaspora Conference — Day 5",
+    time: "7:00 PM EDT / 6:00 PM JT",
+  },
+
+  // =====================
   // Reason with Rattigan — Episodes
   // Year: 2026
   // =====================
+
+  {
+    seriesId: "reason-sat",
+    date: new Date(2026, 4, 24), // May 24, 2026 (Sat)
+    published: true,
+    title: "Reason With Rattigan",
+    time: "3:00 PM NY / 2:00 PM JA",
+    agenda: [
+      "THE F-L-A REPORT AND THE INVESTIGATION THAT LACKS INTEGRITY",
+    ],
+    links: [
+      {
+        label: "Watch on YouTube",
+        url: "https://www.youtube.com/@reasonwithrattigan",
+        kind: "youtube",
+        primary: true,
+      },
+      {
+        label: "Listen on Reggae Global Radio",
+        url: "https://reggaeglobalradio.com",
+        kind: "radio",
+      },
+      {
+        label: "Newsletter",
+        url: "https://globaldigital.createsend1.com/t/d-e-sdjkytd-l-i/",
+        kind: "website",
+      },
+    ],
+  },
 
   {
     seriesId: "reason-sat",
