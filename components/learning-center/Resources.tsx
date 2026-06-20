@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { format } from "date-fns";
 import {
   BookOpen,
   FileText,
@@ -10,6 +11,7 @@ import {
   ChevronDown,
   Download,
 } from "lucide-react";
+import { getArchivedEventCards, type EventLink } from "../../lib/events-data";
 
 interface LearningCenterProps {
   onNavigate?: (page: string) => void;
@@ -22,7 +24,7 @@ type CategoryTitle =
   | "Document Library";
 
 type BaseResource = {
-  type: "video" | "guide";
+  type: "video" | "guide" | "eventArchive";
   title: string;
   description: string;
   category: CategoryTitle;
@@ -41,7 +43,17 @@ type GuideResource = BaseResource & {
   downloadUrl?: string;
 };
 
-type Resource = VideoResource | GuideResource;
+// Auto-generated from a one-time event (lib/events-data.ts) once it's
+// concluded — e.g. a conference. Plays its recap video if one was attached,
+// otherwise falls back to the event's poster image, plus links out (YouTube, etc).
+type EventArchiveResource = BaseResource & {
+  type: "eventArchive";
+  image?: string;
+  videoSrc?: string;
+  links?: EventLink[];
+};
+
+type Resource = VideoResource | GuideResource | EventArchiveResource;
 
 const CATEGORY_META: Record<
   CategoryTitle,
@@ -229,6 +241,21 @@ export default function Resources({ onNavigate }: LearningCenterProps) {
     { title: "Document Library" },
   ];
 
+  // Concluded one-time events (conferences, etc.) — still on the /events
+  // calendar, but surfaced here automatically once their last date passes.
+  const archivedEventResources: EventArchiveResource[] = getArchivedEventCards(
+    new Date()
+  ).map((ev) => ({
+    type: "eventArchive",
+    title: ev.title,
+    description: ev.description ?? "",
+    category: "Archive",
+    date: format(ev.date, "yyyy"),
+    image: ev.image,
+    videoSrc: ev.videoSrc,
+    links: ev.links,
+  }));
+
   // NOTE:
   // Replace these image paths with files you put in /public (recommended).
   // Example: public/learning/claim.png -> "/learning/claim.png"
@@ -350,6 +377,7 @@ export default function Resources({ onNavigate }: LearningCenterProps) {
       date: "2024",
       videoId: "KRIS8Tg51LI",
     },
+    ...archivedEventResources,
 
     // Document Library
     {
@@ -669,6 +697,56 @@ export default function Resources({ onNavigate }: LearningCenterProps) {
                             {resource.title}
                           </h3>
                           <p className="text-gray-600">{resource.description}</p>
+                        </>
+                      ) : resource.type === "eventArchive" ? (
+                        <>
+                          {resource.videoSrc ? (
+                            <div
+                              className="relative mb-4 w-full overflow-hidden rounded-lg bg-black"
+                              style={{ paddingBottom: "56.25%" }}
+                            >
+                              <video
+                                controls
+                                preload="metadata"
+                                className="absolute left-0 top-0 h-full w-full"
+                              >
+                                <source src={resource.videoSrc} type="video/mp4" />
+                              </video>
+                            </div>
+                          ) : resource.image ? (
+                            <img
+                              src={resource.image}
+                              alt={resource.title}
+                              className="mb-4 h-48 w-full rounded-lg object-cover"
+                            />
+                          ) : null}
+
+                          <h3 className="mb-2 text-lg font-semibold">
+                            {resource.title}
+                          </h3>
+                          <p className="mb-4 text-gray-600">
+                            {resource.description}
+                          </p>
+
+                          {resource.links?.length ? (
+                            <div className="space-y-2">
+                              {resource.links.map((link) => (
+                                <a
+                                  key={link.url}
+                                  href={link.url}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="inline-flex w-full items-center justify-center rounded-xl border px-4 py-2 text-sm font-semibold transition hover:bg-gray-50"
+                                  style={{
+                                    borderColor: meta.color,
+                                    color: meta.color,
+                                  }}
+                                >
+                                  {link.label}
+                                </a>
+                              ))}
+                            </div>
+                          ) : null}
                         </>
                       ) : (
                         <>

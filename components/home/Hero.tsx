@@ -242,17 +242,17 @@ export default function Hero() {
               <div>
                 <div className="flex items-center gap-3 mb-1">
                   <span className="rounded-full bg-white px-3 py-1 text-xs font-bold text-red-600">
-                     🎬 WATCH THE RECAP
+                     🔴 LIVE TODAY • 3PM NY / 2PM JA
                   </span>
                   <h3 className="font-semibold">Reason With Rattigan</h3>
                 </div>
-                <p className="text-white/90">THE F-L-A REPORT AND THE INVESTIGATION THAT LACKS INTEGRITY</p>
+                <p className="text-white/90">MINISTER CHANG: HAVE YOU BEEN TRUTHFUL ABOUT THE MOU AND U.S. DEPORTEES?</p>
               </div>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3">
               <a
-                href="https://reggaeglobalradio.com"
+                href="https://reggaeglobalradio.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-xl bg-white px-6 py-3 font-semibold text-red-600 shadow-lg hover:bg-gray-100"
@@ -262,13 +262,13 @@ export default function Hero() {
               </a>
 
              <a
-              href="https://www.youtube.com/@OJLDF"
+              href="https://www.youtube.com/live/97iRmIUAz0U?si=8FWdwfOkNVOg9J_k"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-xl bg-white px-6 py-3 font-semibold text-red-600 shadow-lg hover:bg-gray-100"
             >
               <Video className="w-5 h-5 mr-2" />
-              YouTube
+              Watch Live on YouTube
             </a>
             </div>
           </div>

@@ -1,5 +1,10 @@
 import * as React from 'react';
 import Image from 'next/image';
+import {
+  formatOneTimeSeriesDateRange,
+  getUpcomingOneTimeSeries,
+  type EventType,
+} from '../../lib/events-data';
 
 type EventItem = {
   title: string;
@@ -10,7 +15,7 @@ type EventItem = {
   href?: string;
 };
 
-const events: EventItem[] = [
+const RECURRING_EVENTS: EventItem[] = [
   {
     title: 'Come Reason With Rattigan',
     date: 'Every Wednesday 8pm–10pm EST',
@@ -25,15 +30,27 @@ const events: EventItem[] = [
     imageSrc: '/reason-rattigan.png',
     href: '/events',
   },
-  {
-    title: '2nd Biennial Online Diaspora Conference',
-    date: 'June 14–18, 2026 · 7pm EDT / 6pm JT',
-    type: 'Online',
-    imageSrc: '/diaspora-conference.png',
+];
+
+function eventTypeLabel(type: EventType): EventItem['type'] {
+  return type === 'in-person' ? 'In Person' : 'Online';
+}
+
+// One-time events (conferences, etc.) drop off this list once their last
+// date has passed — they stay on the /events calendar and move to the
+// Learning Center Archive instead. See lib/events-data.ts.
+function getUpcomingEvents(): EventItem[] {
+  const oneTimeEvents: EventItem[] = getUpcomingOneTimeSeries(new Date()).map((series) => ({
+    title: series.title,
+    date: formatOneTimeSeriesDateRange(series),
+    type: eventTypeLabel(series.type),
+    imageSrc: series.image ?? '/hero-fallback.jpg',
     objectFit: 'contain',
     href: '/events',
-  },
-];
+  }));
+
+  return [...RECURRING_EVENTS, ...oneTimeEvents];
+}
 
 function EventCard({ title, date, type, imageSrc, objectFit = 'cover', href }: EventItem) {
   const CardInner = (
@@ -78,6 +95,8 @@ function EventCard({ title, date, type, imageSrc, objectFit = 'cover', href }: E
 }
 
 export default function UpcomingEvents() {
+  const events = getUpcomingEvents();
+
   return (
     <section className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

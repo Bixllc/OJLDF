@@ -191,6 +191,114 @@ export const EPISODES: Episode[] = [
 
   {
     seriesId: "reason-sat",
+    date: new Date(2026, 5, 20), // June 20, 2026 (Sat)
+    published: true,
+    title: "Reason With Rattigan",
+    time: "3:00 PM NY / 2:00 PM JA",
+    agenda: [
+      "Guest lecturers: Jeanette Calder, JAMP",
+      "Guest lecturers: Dr. Roger Hunter",
+      "DR. WHEATLEY AND DR. HOLNESS: ARE THEY TWO PEAS IN A POD?",
+      "NaRRA LEGISLATION: CORRUPTION OR RESILIENCE?",
+      "MINISTER CHANG: HAVE YOU BEEN TRUTHFUL ABOUT THE MOU AND U.S. DEPORTEES?",
+    ],
+    links: [
+      {
+        label: "Watch Live on YouTube",
+        url: "https://www.youtube.com/live/97iRmIUAz0U?si=8FWdwfOkNVOg9J_k",
+        kind: "youtube",
+        primary: true,
+      },
+      {
+        label: "Listen on Reggae Global Radio",
+        url: "https://reggaeglobalradio.com/",
+        kind: "radio",
+      },
+      {
+        label: "Newsletter",
+        url: "https://globaldigital.createsend1.com/t/d-e-sdjkytd-l-i/",
+        kind: "website",
+      },
+    ],
+  },
+
+  {
+    seriesId: "reason-sat",
+    date: new Date(2026, 5, 13), // June 13, 2026 (Sat)
+    published: true,
+    title: "Reason With Rattigan",
+    time: "3:00 PM NY / 2:00 PM JA",
+    agenda: [
+      "FINAL EXAM!",
+      "THE DIASPORA CONFERENCE: PROSPERITY FOR THE PROSPEROUS OR POVERTY STRICKEN?",
+      "PM HOLNESS' FINANCES: BIG MAN, WEH YUH GET SUH MUCH MONEY FRAM?",
+    ],
+    links: [
+      {
+        label: "Watch on YouTube",
+        url: "https://www.youtube.com/@reasonwithrattigan",
+        kind: "youtube",
+        primary: true,
+      },
+      {
+        label: "Listen on Reggae Global Radio",
+        url: "https://reggaeglobalradio.com/",
+        kind: "radio",
+      },
+      {
+        label: "Newsletter",
+        url: "https://globaldigital.createsend1.com/t/d-e-sdjkytd-l-i/",
+        kind: "website",
+      },
+    ],
+  },
+
+  {
+    seriesId: "come-reason-wed",
+    date: new Date(2026, 5, 10), // June 10, 2026 (Wed)
+    published: true,
+    links: [
+      {
+        label: "Watch Live on YouTube",
+        url: "https://www.youtube.com/live/5uJmjcMbReg?si=HeEADbuOR2IxQx0E",
+        kind: "youtube",
+        primary: true,
+      },
+    ],
+  },
+
+  {
+    seriesId: "reason-sat",
+    date: new Date(2026, 5, 6), // June 6, 2026 (Sat)
+    published: true,
+    title: "Reason With Rattigan",
+    time: "3:00 PM NY / 2:00 PM JA",
+    agenda: [
+      "THE PROVOST AND THE PROFESSOR ARE BACK!",
+      "THE F-L-A REPORT AND THE INVESTIGATION THAT LACKS INTEGRITY",
+    ],
+    links: [
+      {
+        label: "Watch on YouTube",
+        url: "https://www.youtube.com/@reasonwithrattigan",
+        kind: "youtube",
+        primary: true,
+      },
+      {
+        label: "Listen on Reggae Global Radio",
+        url: "https://reggaeglobalradio.com/",
+        kind: "radio",
+      },
+      {
+        label: "Newsletter",
+        url: "https://globaldigital.createsend1.com/t/d-e-sdjkytd-l-i/",
+        kind: "website",
+      },
+    ],
+  },
+
+  {
+    seriesId: "reason-sat",
     date: new Date(2026, 4, 24), // May 24, 2026 (Sat)
     published: true,
     title: "Reason With Rattigan",
@@ -504,7 +612,7 @@ export function nextWeeklyOccurrences(series: Series, from: Date, count: number)
   return results;
 }
 
-function startOfLocalDay(d: Date) {
+export function startOfLocalDay(d: Date) {
   return new Date(d.getFullYear(), d.getMonth(), d.getDate());
 }
 
@@ -565,4 +673,93 @@ export function getLatestEventForBanner(today = new Date()): ResolvedEvent | nul
 
   candidates.sort((a, b) => b.date.getTime() - a.date.getTime());
   return candidates[0];
+}
+
+/* -------------------------------------------------------------------------- */
+/*                    One-time events: upcoming vs. archived                 */
+/* -------------------------------------------------------------------------- */
+
+/**
+ * One-time events (conferences, etc. — recurringRule "none") are "archived"
+ * once their last scheduled date has passed. Archived events drop out of
+ * "upcoming" listings but remain on the calendar, since resolveEventsForDate
+ * doesn't filter by date — only getUpcomingOneTimeSeries/getArchivedOneTimeSeries do.
+ */
+
+export function getOneTimeSeries() {
+  return SERIES.filter((s) => s.recurringRule === "none");
+}
+
+export function isOneTimeSeriesArchived(series: Series, today = new Date()) {
+  if (series.recurringRule !== "none") return false;
+
+  const episodes = EPISODES.filter((e) => e.seriesId === series.id);
+  if (!episodes.length) return false;
+
+  const lastDate = episodes.reduce(
+    (latest, e) => (e.date > latest ? e.date : latest),
+    episodes[0].date
+  );
+
+  return startOfLocalDay(lastDate) < startOfLocalDay(today);
+}
+
+export function getUpcomingOneTimeSeries(today = new Date()) {
+  return getOneTimeSeries().filter((s) => !isOneTimeSeriesArchived(s, today));
+}
+
+export function getArchivedOneTimeSeries(today = new Date()) {
+  return getOneTimeSeries().filter((s) => isOneTimeSeriesArchived(s, today));
+}
+
+export function formatOneTimeSeriesDateRange(series: Series) {
+  const episodes = EPISODES.filter((e) => e.seriesId === series.id).sort(
+    (a, b) => a.date.getTime() - b.date.getTime()
+  );
+  if (!episodes.length) return series.time;
+
+  const first = episodes[0];
+  const last = episodes[episodes.length - 1];
+  const time = first.time ?? series.time;
+
+  if (sameDay(first.date, last.date)) {
+    return `${format(first.date, "MMMM d, yyyy")} · ${time}`;
+  }
+
+  if (
+    first.date.getMonth() === last.date.getMonth() &&
+    first.date.getFullYear() === last.date.getFullYear()
+  ) {
+    return `${format(first.date, "MMMM d")}–${format(last.date, "d, yyyy")} · ${time}`;
+  }
+
+  return `${format(first.date, "MMMM d, yyyy")} – ${format(last.date, "MMMM d, yyyy")} · ${time}`;
+}
+
+/**
+ * One card per archived one-time series, for surfacing in the Learning
+ * Center Archive once the event has concluded.
+ */
+export function getArchivedEventCards(today = new Date()): ResolvedEvent[] {
+  return getArchivedOneTimeSeries(today).map((series) => {
+    const episodes = EPISODES.filter((e) => e.seriesId === series.id).sort(
+      (a, b) => a.date.getTime() - b.date.getTime()
+    );
+    const last = episodes[episodes.length - 1];
+    const videoSrc = episodes.find((e) => e.videoSrc)?.videoSrc;
+
+    return {
+      id: `${series.id}-archive`,
+      seriesId: series.id,
+      date: last.date,
+      title: series.title,
+      type: series.type,
+      time: formatOneTimeSeriesDateRange(series),
+      platform: series.platform,
+      image: series.image,
+      description: series.defaultDescription,
+      links: series.defaultLinks,
+      videoSrc,
+    };
+  });
 }
