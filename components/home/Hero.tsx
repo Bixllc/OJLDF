@@ -246,7 +246,7 @@ export default function Hero() {
                   </span>
                   <h3 className="font-semibold">Reason With Rattigan</h3>
                 </div>
-                <p className="text-white/90">MINISTER CHANG: HAVE YOU BEEN TRUTHFUL ABOUT THE MOU AND U.S. DEPORTEES?</p>
+                <p className="text-white/90">DID MINISTER AUDREY MARKS' SPEECH REMOVE THE DOUBTS ABOUT HER (IN)COMPETENCE? • TCN PROGRAM: THE USG'S CLEARLY STATED POSITION • WHO "LEAKED" THE DIPLOMATIC NOTE/MOU TO THE MEDIA? WHY?</p>
               </div>
             </div>
 
@@ -262,7 +262,7 @@ export default function Hero() {
               </a>
 
              <a
-              href="https://www.youtube.com/live/97iRmIUAz0U?si=8FWdwfOkNVOg9J_k"
+              href="https://www.youtube.com/@reasonwithrattigan"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-xl bg-white px-6 py-3 font-semibold text-red-600 shadow-lg hover:bg-gray-100"

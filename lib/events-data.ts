@@ -190,6 +190,101 @@ export const EPISODES: Episode[] = [
   // =====================
 
   {
+    seriesId: "come-reason-wed",
+    date: new Date(2026, 6, 1), // July 1, 2026 (Wed)
+    published: true,
+    title: "Reason With Rattigan",
+    time: "3:00 PM NY / 2:00 PM JA",
+    agenda: [
+      "WATER: IF THE FERRY DESALINATION PLANT WASN'T BUILT, WHERE IS THE MONEY?",
+      "IMMIGRATION: IS THE GOVERNMENT LYING ABOUT THE TCN AND THE \"STRUCTURED MIGRATION\" PROGRAMS?",
+      "GOOD GOVERNANCE: WILL THE INCREASING PRESSURE FORCE PM HOLNESS TO SEEK MP WHEATLEY'S RESIGNATION?",
+    ],
+    links: [
+      {
+        label: "Watch Live on YouTube",
+        url: "https://www.youtube.com/live/vPogGNA6Vak?si=Y2nLXJPFgfahBhNA",
+        kind: "youtube",
+        primary: true,
+      },
+      {
+        label: "Listen on Reggae Global Radio",
+        url: "https://reggaeglobalradio.com/",
+        kind: "radio",
+      },
+      {
+        label: "Newsletter",
+        url: "https://globaldigital.createsend1.com/t/d-e-sdjkytd-l-i/",
+        kind: "website",
+      },
+    ],
+  },
+
+  {
+    seriesId: "reason-sat",
+    date: new Date(2026, 6, 4), // July 4, 2026 (Sat)
+    published: true,
+    title: "Reason With Rattigan",
+    time: "3:00 PM NY / 2:00 PM JA",
+    description:
+      "CLASS STARTS PROMPTLY TODAY AT 3PM (NY) / 2PM (JAMAICA) ON \"REASON WITH RATTIGAN\" VIA REGGAE GLOBAL RADIO AND YOUTUBE.",
+    agenda: [
+      "DID MINISTER AUDREY MARKS' SPEECH REMOVE THE DOUBTS ABOUT HER (IN)COMPETENCE?",
+      "TCN PROGRAM: THE USG'S CLEARLY STATED POSITION",
+      "WHO \"LEAKED\" THE DIPLOMATIC NOTE/MOU TO THE MEDIA? WHY?",
+    ],
+    links: [
+      {
+        label: "Watch on YouTube",
+        url: "https://www.youtube.com/@reasonwithrattigan",
+        kind: "youtube",
+        primary: true,
+      },
+      {
+        label: "Listen on Reggae Global Radio",
+        url: "https://reggaeglobalradio.com/",
+        kind: "radio",
+      },
+      {
+        label: "Newsletter",
+        url: "https://globaldigital.createsend1.com/t/d-e-sdjkytd-l-i/",
+        kind: "website",
+      },
+    ],
+  },
+
+  {
+    seriesId: "reason-sat",
+    date: new Date(2026, 5, 27), // June 27, 2026 (Sat)
+    published: true,
+    title: "Reason With Rattigan",
+    time: "3:00 PM NY / 2:00 PM JA",
+    agenda: [
+      "WATER: IF THE FERRY DESALINATION PLANT WASN'T BUILT, WHERE IS THE MONEY?",
+      "IMMIGRATION: IS THE GOVERNMENT LYING ABOUT THE TCN AND THE \"STRUCTURED MIGRATION\" PROGRAMS?",
+      "GOOD GOVERNANCE: WILL THE INCREASING PRESSURE FORCE PM HOLNESS TO SEEK MP WHEATLEY'S RESIGNATION?",
+    ],
+    links: [
+      {
+        label: "Watch on YouTube",
+        url: "https://www.youtube.com/@reasonwithrattigan",
+        kind: "youtube",
+        primary: true,
+      },
+      {
+        label: "Listen on Reggae Global Radio",
+        url: "https://reggaeglobalradio.com/",
+        kind: "radio",
+      },
+      {
+        label: "Newsletter",
+        url: "https://globaldigital.createsend1.com/t/d-e-sdjkytd-l-i/",
+        kind: "website",
+      },
+    ],
+  },
+
+  {
     seriesId: "reason-sat",
     date: new Date(2026, 5, 20), // June 20, 2026 (Sat)
     published: true,
