@@ -16,7 +16,7 @@ export default function RattiBio() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Left: sticky image */}
           <div>
-            <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl sticky top-28 relative">
+            <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl sticky top-32 relative">
               <Image
                 src="/ratti.png"
                 alt="Wilfred S. Rattigan"

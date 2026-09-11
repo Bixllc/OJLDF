@@ -13,15 +13,15 @@ import Footer from '../components/shared/Footer';
 export default function Page() {
   return (
     <>
-      <NavBar />;
-      <Hero />;
-      <UpcomingEvents />;
-      <HurricaneRelief />;
-      <Stats />;
-      <ImportantInitiatives />;
-      <Serve />;
-      <RecapComeReasonWithRattigan />;
-      <Footer />;
+      <NavBar />
+      <Hero />
+      <UpcomingEvents />
+      <HurricaneRelief />
+      <Stats />
+      <ImportantInitiatives />
+      <Serve />
+      <RecapComeReasonWithRattigan />
+      <Footer />
     </>
   )
 }

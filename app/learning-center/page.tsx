@@ -16,7 +16,8 @@ export default function LearningCenterPage() {
       <LCHero />
 
       {/* Tab Bar */}
-      <div className="border-b border-gray-200 bg-white sticky top-0 z-30">
+      {/* top offset = sticky NavBar height (36px marquee + 80px bar) */}
+      <div className="border-b border-gray-200 bg-white sticky top-[116px] z-30">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <nav className="flex gap-8" aria-label="Learning Center tabs">
             <button
