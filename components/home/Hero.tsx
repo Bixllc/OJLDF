@@ -246,7 +246,7 @@ export default function Hero() {
                   </span>
                   <h3 className="font-semibold">Reason With Rattigan</h3>
                 </div>
-                <p className="text-white/90">MINISTER TUFTON AND HEALTH CARE: THE &quot;PUBLIC SECRETS&quot; THAT ARE KILLING JAMAICANS AND SCARING FOREIGNERS</p>
+                <p className="text-white/90">MINISTER TUFTON AND THE HEALTH SECTOR CRISIS, PT. 2 • MINISTER SAMUDA: IN THE ABUNDANCE OF WATER THERE IS DROUGHT • SUMMER EXAM RESULTS</p>
               </div>
             </div>
 
@@ -262,7 +262,7 @@ export default function Hero() {
               </a>
 
              <a
-              href="https://www.youtube.com/@reasonwithrattigan"
+              href="https://www.youtube.com/live/l73EZ8MwD5g"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center whitespace-nowrap rounded-xl bg-white px-6 py-3 font-semibold text-red-600 shadow-lg hover:bg-gray-100"
