@@ -190,6 +190,67 @@ export const EPISODES: Episode[] = [
   // =====================
 
   {
+    seriesId: "come-reason-wed",
+    date: new Date(2026, 8, 9), // September 9, 2026 (Wed)
+    published: true,
+    links: [
+      {
+        label: "Watch Live on YouTube",
+        url: "https://www.youtube.com/live/EzRi-zKGOHM?si=szQpFh4W6B3ltdFN",
+        kind: "youtube",
+        primary: true,
+      },
+    ],
+  },
+
+  {
+    seriesId: "reason-sat",
+    date: new Date(2026, 8, 5), // September 5, 2026 (Sat)
+    published: true,
+    title: "Reason With Rattigan",
+    time: "3:00 PM NY / 2:00 PM JA",
+    description:
+      "CLASS STARTS PROMPTLY TODAY AT 3PM (NY) / 2PM (JAMAICA) ON \"REASON WITH RATTIGAN\" VIA REGGAE GLOBAL RADIO AND YOUTUBE.",
+    agenda: [
+      "MINISTER TUFTON AND THE HEALTH SECTOR CRISIS, PT. 2",
+      "MINISTER SAMUDA: IN THE ABUNDANCE OF WATER THERE IS DROUGHT",
+      "SUMMER EXAM RESULTS",
+    ],
+    links: [
+      {
+        label: "Watch on YouTube",
+        url: "https://www.youtube.com/@reasonwithrattigan",
+        kind: "youtube",
+        primary: true,
+      },
+      {
+        label: "Listen on Reggae Global Radio",
+        url: "https://reggaeglobalradio.com/",
+        kind: "radio",
+      },
+      {
+        label: "Newsletter",
+        url: "https://globaldigital.createsend1.com/t/d-e-sdjkytd-l-i/",
+        kind: "website",
+      },
+    ],
+  },
+
+  {
+    seriesId: "come-reason-wed",
+    date: new Date(2026, 8, 2), // September 2, 2026 (Wed)
+    published: true,
+    links: [
+      {
+        label: "Watch Live on YouTube",
+        url: "https://www.youtube.com/live/fQKlHMeoXPg?si=x-MR0RZWP_gO9XDZ",
+        kind: "youtube",
+        primary: true,
+      },
+    ],
+  },
+
+  {
     seriesId: "reason-sat",
     date: new Date(2026, 7, 29), // August 29, 2026 (Sat)
     published: true,
@@ -370,6 +431,39 @@ export const EPISODES: Episode[] = [
         url: "https://www.youtube.com/live/8l2dn9fKHfo?si=6m7YyDGOu5IQyw4Y",
         kind: "youtube",
         primary: true,
+      },
+    ],
+  },
+
+  {
+    seriesId: "reason-sat",
+    date: new Date(2026, 7, 1), // August 1, 2026 (Sat)
+    published: true,
+    title: "Reason With Rattigan",
+    time: "3:00 PM NY / 2:00 PM JA",
+    description:
+      "CLASS STARTS PROMPTLY TODAY AT 3PM (NY) / 2PM (JAMAICA) ON \"REASON WITH RATTIGAN\" VIA REGGAE GLOBAL RADIO AND YOUTUBE.",
+    agenda: [
+      "ARE HOLNESS' DAYS AS PRIME MINISTER NUMBERED?",
+      "WILL \"FORKED TONGUE\" MARKS AND \"SILVER TONGUE\" JOHNSON SMITH TELL US WHEN THE 10,000 \"UPSTANDING\" DEPORTEES WILL ARRIVE FROM THE U.S.?",
+      "TRUTH IS A SMALL SOLACE TO THE VICTIMS OF HURRICANES BERYL AND MELISSA",
+    ],
+    links: [
+      {
+        label: "Watch on YouTube",
+        url: "https://www.youtube.com/@reasonwithrattigan",
+        kind: "youtube",
+        primary: true,
+      },
+      {
+        label: "Listen on Reggae Global Radio",
+        url: "https://reggaeglobalradio.com/",
+        kind: "radio",
+      },
+      {
+        label: "Newsletter",
+        url: "https://globaldigital.createsend1.com/t/d-e-sdjkytd-l-i/",
+        kind: "website",
       },
     ],
   },
@@ -729,6 +823,20 @@ export const EPISODES: Episode[] = [
 
   {
     seriesId: "reason-sat",
+    date: new Date(2026, 4, 30), // May 30, 2026 (Sat) — postponed
+    published: true,
+    title: "Reason With Rattigan — Postponed",
+    time: "3:00 PM NY / 2:00 PM JA",
+    description:
+      "DUE TO UNFORESEEN CIRCUMSTANCES, CLASSES SCHEDULED FOR MAY 23 AND 30 HAVE BEEN POSTPONED AND RESCHEDULED FOR JUNE 6, 2026.",
+    agenda: [
+      "CLASS POSTPONED — RESCHEDULED FOR JUNE 6, 2026",
+      "PLEASE CONTINUE TO STUDY FOR THE FINAL EXAM WHICH WILL BE ADMINISTERED ON JUNE 6, 2026.",
+    ],
+  },
+
+  {
+    seriesId: "reason-sat",
     date: new Date(2026, 4, 24), // May 24, 2026 (Sat)
     published: true,
     title: "Reason With Rattigan",
@@ -753,6 +861,20 @@ export const EPISODES: Episode[] = [
         url: "https://globaldigital.createsend1.com/t/d-e-sdjkytd-l-i/",
         kind: "website",
       },
+    ],
+  },
+
+  {
+    seriesId: "reason-sat",
+    date: new Date(2026, 4, 23), // May 23, 2026 (Sat) — postponed
+    published: true,
+    title: "Reason With Rattigan — Postponed",
+    time: "3:00 PM NY / 2:00 PM JA",
+    description:
+      "DUE TO UNFORESEEN CIRCUMSTANCES, CLASSES SCHEDULED FOR MAY 23 AND 30 HAVE BEEN POSTPONED AND RESCHEDULED FOR JUNE 6, 2026.",
+    agenda: [
+      "CLASS POSTPONED — RESCHEDULED FOR JUNE 6, 2026",
+      "PLEASE CONTINUE TO STUDY FOR THE FINAL EXAM WHICH WILL BE ADMINISTERED ON JUNE 6, 2026.",
     ],
   },
 
@@ -806,6 +928,86 @@ export const EPISODES: Episode[] = [
       {
         label: "Listen on Reggae Global Radio",
         url: "https://reggaeglobalradio.com",
+        kind: "radio",
+      },
+      {
+        label: "Newsletter",
+        url: "https://globaldigital.createsend1.com/t/d-e-sdjkytd-l-i/",
+        kind: "website",
+      },
+    ],
+  },
+
+  {
+    seriesId: "reason-sat",
+    date: new Date(2026, 2, 14), // March 14, 2026 (Sat)
+    published: true,
+    title: "Reason With Rattigan",
+    time: "3:00 PM NY / 2:00 PM JA",
+    description:
+      "CLASS STARTS PROMPTLY TODAY AT 3PM (NY) / 2PM (JAMAICA) ON \"REASON WITH RATTIGAN\" VIA REGGAE GLOBAL RADIO AND YOUTUBE.",
+    agenda: [
+      "MID-TERM EXAM TODAY!",
+      "THE GOJ JUST \"DISCOVERED\" LEGAL VIOLATIONS WITH THE CUBAN MEDICAL PROGRAM: THE PEOPLE CANNOT BE FOOLED ALL THE TIME",
+      "SPEAKER HOLNESS' REIGN OF TERROR, RUDENESS, AND IGNORANCE: HOW MUCH MORE CAN WE COUNTENANCE?",
+      "THE AUDITOR GENERAL, STAKEHOLDERS, AND THE RURAL SCHOOL BUS PROGRAM - REAL ADVOCACY IN ACTION",
+    ],
+    links: [
+      {
+        label: "Watch on YouTube",
+        url: "https://www.youtube.com/@reasonwithrattigan",
+        kind: "youtube",
+        primary: true,
+      },
+      {
+        label: "Listen on Reggae Global Radio",
+        url: "https://reggaeglobalradio.com/",
+        kind: "radio",
+      },
+      {
+        label: "Newsletter",
+        url: "https://globaldigital.createsend1.com/t/d-e-sdjkytd-l-i/",
+        kind: "website",
+      },
+    ],
+  },
+
+  {
+    seriesId: "come-reason-wed",
+    date: new Date(2026, 2, 11), // March 11, 2026 (Wed)
+    published: true,
+    links: [
+      {
+        label: "Watch Live on YouTube",
+        url: "https://www.youtube.com/live/fJz8OZSLBeU?si=HfhLgJmCF1i1swJu",
+        kind: "youtube",
+        primary: true,
+      },
+    ],
+  },
+
+  {
+    seriesId: "reason-sat",
+    date: new Date(2026, 2, 7), // March 7, 2026 (Sat)
+    published: true,
+    title: "Reason With Rattigan",
+    time: "3:00 PM NY / 3:00 PM JA",
+    description:
+      "CLASS STARTS PROMPTLY TODAY AT 3 PM (NY/JAMAICA) ON \"REASON WITH RATTIGAN\" VIA REGGAE GLOBAL RADIO AND YOUTUBE.",
+    agenda: [
+      "THE JAMAICAN PEOPLE AND INACTION: EDUCATION V. ENTERTAINMENT",
+      "CLASS DISCUSSION: HOW CAN 5 MPs CHART THE COURSE FOR A BETTER JAMAICA?",
+    ],
+    links: [
+      {
+        label: "Watch on YouTube",
+        url: "https://www.youtube.com/@reasonwithrattigan",
+        kind: "youtube",
+        primary: true,
+      },
+      {
+        label: "Listen on Reggae Global Radio",
+        url: "https://reggaeglobalradio.com/",
         kind: "radio",
       },
       {
