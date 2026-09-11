@@ -242,11 +242,11 @@ export default function Hero() {
               <div>
                 <div className="flex items-center gap-3 mb-1">
                   <span className="rounded-full bg-white px-3 py-1 text-xs font-bold text-red-600">
-                     🔴 LIVE TODAY • 3PM NY / 2PM JA
+                     🎬 WATCH THE RECAP
                   </span>
                   <h3 className="font-semibold">Reason With Rattigan</h3>
                 </div>
-                <p className="text-white/90">DID MINISTER AUDREY MARKS' SPEECH REMOVE THE DOUBTS ABOUT HER (IN)COMPETENCE? • TCN PROGRAM: THE USG'S CLEARLY STATED POSITION • WHO "LEAKED" THE DIPLOMATIC NOTE/MOU TO THE MEDIA? WHY?</p>
+                <p className="text-white/90">MINISTER TUFTON AND HEALTH CARE: THE &quot;PUBLIC SECRETS&quot; THAT ARE KILLING JAMAICANS AND SCARING FOREIGNERS</p>
               </div>
             </div>
 
@@ -255,7 +255,7 @@ export default function Hero() {
                 href="https://reggaeglobalradio.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-xl bg-white px-6 py-3 font-semibold text-red-600 shadow-lg hover:bg-gray-100"
+                className="inline-flex items-center justify-center whitespace-nowrap rounded-xl bg-white px-6 py-3 font-semibold text-red-600 shadow-lg hover:bg-gray-100"
               >
                 <Radio className="w-5 h-5 mr-2" />
                 Reggae Global Radio
@@ -265,10 +265,10 @@ export default function Hero() {
               href="https://www.youtube.com/@reasonwithrattigan"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-xl bg-white px-6 py-3 font-semibold text-red-600 shadow-lg hover:bg-gray-100"
+              className="inline-flex items-center justify-center whitespace-nowrap rounded-xl bg-white px-6 py-3 font-semibold text-red-600 shadow-lg hover:bg-gray-100"
             >
               <Video className="w-5 h-5 mr-2" />
-              Watch Live on YouTube
+              Watch the Recap
             </a>
             </div>
           </div>

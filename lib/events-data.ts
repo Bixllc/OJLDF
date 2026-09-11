@@ -190,6 +190,341 @@ export const EPISODES: Episode[] = [
   // =====================
 
   {
+    seriesId: "reason-sat",
+    date: new Date(2026, 7, 29), // August 29, 2026 (Sat)
+    published: true,
+    title: "Reason With Rattigan",
+    time: "3:00 PM NY / 2:00 PM JA",
+    description:
+      "CLASS STARTS PROMPTLY TODAY AT 3PM (NY) / 2PM (JAMAICA) ON \"REASON WITH RATTIGAN\" VIA REGGAE GLOBAL RADIO AND YOUTUBE.",
+    agenda: [
+      "MINISTER TUFTON AND HEALTH CARE: THE \"PUBLIC SECRETS\" THAT ARE KILLING JAMAICANS AND SCARING FOREIGNERS",
+    ],
+    links: [
+      {
+        label: "Watch on YouTube",
+        url: "https://www.youtube.com/@reasonwithrattigan",
+        kind: "youtube",
+        primary: true,
+      },
+      {
+        label: "Listen on Reggae Global Radio",
+        url: "https://reggaeglobalradio.com/",
+        kind: "radio",
+      },
+      {
+        label: "Newsletter",
+        url: "https://globaldigital.createsend1.com/t/d-e-sdjkytd-l-i/",
+        kind: "website",
+      },
+    ],
+  },
+
+  {
+    seriesId: "come-reason-wed",
+    date: new Date(2026, 7, 26), // August 26, 2026 (Wed)
+    published: true,
+    links: [
+      {
+        label: "Watch Live on YouTube",
+        url: "https://www.youtube.com/live/0hudLLvlfE8?si=wT8lKDgyd64aeWtl",
+        kind: "youtube",
+        primary: true,
+      },
+    ],
+  },
+
+  {
+    seriesId: "reason-sat",
+    date: new Date(2026, 7, 22), // August 22, 2026 (Sat)
+    published: true,
+    title: "Reason With Rattigan",
+    time: "3:00 PM NY / 2:00 PM JA",
+    description:
+      "CLASS STARTS PROMPTLY TODAY AT 3PM (NY) / 2PM (JAMAICA) ON \"REASON WITH RATTIGAN\" VIA REGGAE GLOBAL RADIO AND YOUTUBE. GUEST LECTURERS: BERT SAMUELS, KC; CHRISTOPHER HENRY, ESQ.; DR. DEVON TAYLOR, JABBEM.",
+    agenda: [
+      "\"COOPERS PEN\" SAGA: DO \"SQUATTERS\" HAVE LEGAL RIGHTS?",
+      "OVERWATER BUNGALOWS: THE IMPACT ON BEACH ACCESS AND THE ENVIRONMENT",
+    ],
+    links: [
+      {
+        label: "Watch on YouTube",
+        url: "https://www.youtube.com/@reasonwithrattigan",
+        kind: "youtube",
+        primary: true,
+      },
+      {
+        label: "Listen on Reggae Global Radio",
+        url: "https://reggaeglobalradio.com/",
+        kind: "radio",
+      },
+      {
+        label: "Newsletter",
+        url: "https://globaldigital.createsend1.com/t/d-e-sdjkytd-l-i/",
+        kind: "website",
+      },
+    ],
+  },
+
+  {
+    seriesId: "come-reason-wed",
+    date: new Date(2026, 7, 19), // August 19, 2026 (Wed)
+    published: true,
+    links: [
+      {
+        label: "Watch Live on YouTube",
+        url: "https://www.youtube.com/live/ddBr9EYvZwc?si=hKBmdHGNfoV--WGa",
+        kind: "youtube",
+        primary: true,
+      },
+    ],
+  },
+
+  {
+    seriesId: "reason-sat",
+    date: new Date(2026, 7, 15), // August 15, 2026 (Sat)
+    published: true,
+    title: "Reason With Rattigan",
+    time: "3:00 PM NY / 2:00 PM JA",
+    description:
+      "CLASS STARTS PROMPTLY TODAY AT 3PM (NY) / 2PM (JAMAICA) ON \"REASON WITH RATTIGAN\" VIA REGGAE GLOBAL RADIO AND YOUTUBE.",
+    agenda: [
+      "SSL/DELTA CAPITAL PARTNERS/BVI - THE SHOCKING CONNECTIONS",
+      "VAZ' VISAS - THE AMERICAN PERSPECTIVE",
+      "INTEGRITY COMMISSION - BEFORE THE BEGINNING",
+    ],
+    links: [
+      {
+        label: "Watch on YouTube",
+        url: "https://www.youtube.com/@reasonwithrattigan",
+        kind: "youtube",
+        primary: true,
+      },
+      {
+        label: "Listen on Reggae Global Radio",
+        url: "https://reggaeglobalradio.com/",
+        kind: "radio",
+      },
+      {
+        label: "Newsletter",
+        url: "https://globaldigital.createsend1.com/t/d-e-sdjkytd-l-i/",
+        kind: "website",
+      },
+    ],
+  },
+
+  {
+    seriesId: "come-reason-wed",
+    date: new Date(2026, 7, 12), // August 12, 2026 (Wed)
+    published: true,
+    links: [
+      {
+        label: "Watch Live on YouTube",
+        url: "https://www.youtube.com/live/DN2ge7t226g?si=slffN9qSE7BSshXA",
+        kind: "youtube",
+        primary: true,
+      },
+    ],
+  },
+
+  {
+    seriesId: "reason-sat",
+    date: new Date(2026, 7, 8), // August 8, 2026 (Sat)
+    published: true,
+    title: "Reason With Rattigan",
+    time: "3:00 PM NY / 2:00 PM JA",
+    description:
+      "CLASS STARTS PROMPTLY TODAY AT 3PM (NY) / 2PM (JAMAICA) ON \"REASON WITH RATTIGAN\" VIA REGGAE GLOBAL RADIO AND YOUTUBE.",
+    agenda: [
+      "INSIDE VAZ' VISA REVOCATION",
+      "THREE THINGS THAT FULLY EXPLAIN THE \"TCN\" ISSUE",
+      "THE \"SUPPORT JAMAICA\" WEBSITE - DID ANYTHING GO RIGHT?",
+    ],
+    links: [
+      {
+        label: "Watch on YouTube",
+        url: "https://www.youtube.com/@reasonwithrattigan",
+        kind: "youtube",
+        primary: true,
+      },
+      {
+        label: "Listen on Reggae Global Radio",
+        url: "https://reggaeglobalradio.com/",
+        kind: "radio",
+      },
+      {
+        label: "Newsletter",
+        url: "https://globaldigital.createsend1.com/t/d-e-sdjkytd-l-i/",
+        kind: "website",
+      },
+    ],
+  },
+
+  {
+    seriesId: "come-reason-wed",
+    date: new Date(2026, 7, 5), // August 5, 2026 (Wed)
+    published: true,
+    links: [
+      {
+        label: "Watch Live on YouTube",
+        url: "https://www.youtube.com/live/8l2dn9fKHfo?si=6m7YyDGOu5IQyw4Y",
+        kind: "youtube",
+        primary: true,
+      },
+    ],
+  },
+
+  {
+    seriesId: "come-reason-wed",
+    date: new Date(2026, 6, 29), // July 29, 2026 (Wed)
+    published: true,
+    links: [
+      {
+        label: "Watch Live on YouTube",
+        url: "https://www.youtube.com/live/vx7FEdABqXg?is=PxXfCYC0oNNf7FXH",
+        kind: "youtube",
+        primary: true,
+      },
+    ],
+  },
+
+  {
+    seriesId: "reason-sat",
+    date: new Date(2026, 6, 25), // July 25, 2026 (Sat)
+    published: true,
+    title: "Reason With Rattigan",
+    time: "3:00 PM NY / 2:00 PM JA",
+    description:
+      "CLASS STARTS PROMPTLY TODAY AT 3PM (NY) / 2PM (JAMAICA) ON \"REASON WITH RATTIGAN\" VIA REGGAE GLOBAL RADIO AND YOUTUBE.",
+    agenda: [
+      "WHEN IS A \"DEPORTEE\" NOT A \"DEPORTEE\"?",
+      "THE IMPACT OF 10,000 TCNs ON \"VISION 2030 JAMAICA\"",
+    ],
+    links: [
+      {
+        label: "Watch on YouTube",
+        url: "https://www.youtube.com/@reasonwithrattigan",
+        kind: "youtube",
+        primary: true,
+      },
+      {
+        label: "Listen on Reggae Global Radio",
+        url: "https://reggaeglobalradio.com/",
+        kind: "radio",
+      },
+      {
+        label: "Newsletter",
+        url: "https://globaldigital.createsend1.com/t/d-e-sdjkytd-l-i/",
+        kind: "website",
+      },
+    ],
+  },
+
+  {
+    seriesId: "come-reason-wed",
+    date: new Date(2026, 6, 22), // July 22, 2026 (Wed)
+    published: true,
+    links: [
+      {
+        label: "Watch Live on YouTube",
+        url: "https://www.youtube.com/live/c9oUgmECxJw?si=vSdGtkaLJNvUaxcM",
+        kind: "youtube",
+        primary: true,
+      },
+    ],
+  },
+
+  {
+    seriesId: "come-reason-wed",
+    date: new Date(2026, 6, 8), // July 8, 2026 (Wed)
+    published: true,
+    links: [
+      {
+        label: "Watch Live on YouTube",
+        url: "https://www.youtube.com/live/vaFVKWIv5rs?si=H3gpc69iIXtCsAyo",
+        kind: "youtube",
+        primary: true,
+      },
+    ],
+  },
+
+  {
+    seriesId: "reason-sat",
+    date: new Date(2026, 6, 11), // July 11, 2026 (Sat)
+    published: true,
+    title: "Reason With Rattigan",
+    time: "3:00 PM NY / 2:00 PM JA",
+    description:
+      "CLASS STARTS PROMPTLY TODAY AT 3PM (NY) / 2PM (JAMAICA) ON \"REASON WITH RATTIGAN\" VIA REGGAE GLOBAL RADIO AND YOUTUBE.",
+    agenda: [
+      "THE \"AMERICA FIRST\" PROGRAM",
+      "THE \"TCN\" PROGRAM",
+      "THE \"STRUCTURED MIGRATION\" PROGRAM",
+      "SHOULD JAMAICA BELIEVE ANDREW HOLNESS, AUDREY MARKS, DANA MORRIS DIXON, AND HORACE CHANG?",
+      "DID PEARNEL CHARLES, JR. AND KAMINA JOHNSON SMITH RESIGN FROM THE CABINET?",
+    ],
+    links: [
+      {
+        label: "Watch on YouTube",
+        url: "https://www.youtube.com/@reasonwithrattigan",
+        kind: "youtube",
+        primary: true,
+      },
+      {
+        label: "Listen on Reggae Global Radio",
+        url: "https://reggaeglobalradio.com/",
+        kind: "radio",
+      },
+    ],
+  },
+
+  {
+    seriesId: "come-reason-wed",
+    date: new Date(2026, 6, 15), // July 15, 2026 (Wed)
+    published: true,
+    links: [
+      {
+        label: "Watch Live on YouTube",
+        url: "https://www.youtube.com/live/1ydrKzgzl2U?si=BTeAghRfhSHykiJy",
+        kind: "youtube",
+        primary: true,
+      },
+    ],
+  },
+
+  {
+    seriesId: "reason-sat",
+    date: new Date(2026, 6, 18), // July 18, 2026 (Sat)
+    published: true,
+    title: "Reason With Rattigan",
+    time: "3:00 PM NY / 2:00 PM JA",
+    description:
+      "CLASS STARTS PROMPTLY TODAY AT 3PM (NY) / 2PM (JAMAICA) ON \"REASON WITH RATTIGAN\" VIA REGGAE GLOBAL RADIO AND YOUTUBE.",
+    agenda: [
+      "WHAT IS AUDREY MARKS' REAL ROLE IN GOVERNMENT?",
+      "THE \"INTEGRITY\" COMMISSION - A TOOTHLESS AND BLIND TIGER CUB",
+    ],
+    links: [
+      {
+        label: "Watch on YouTube",
+        url: "https://www.youtube.com/@reasonwithrattigan",
+        kind: "youtube",
+        primary: true,
+      },
+      {
+        label: "Listen on Reggae Global Radio",
+        url: "https://reggaeglobalradio.com/",
+        kind: "radio",
+      },
+      {
+        label: "Newsletter",
+        url: "https://globaldigital.createsend1.com/t/d-e-sdjkytd-l-i/",
+        kind: "website",
+      },
+    ],
+  },
+
+  {
     seriesId: "come-reason-wed",
     date: new Date(2026, 6, 1), // July 1, 2026 (Wed)
     published: true,

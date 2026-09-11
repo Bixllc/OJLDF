@@ -445,6 +445,16 @@ export default function Resources({ onNavigate }: LearningCenterProps) {
     },
     {
       type: "guide",
+      title: "Family of Pastor Sent to Eswatini Speaks Out",
+      description: "BTH — Family of pastor sent to Eswatini speaks out, July 16, 2026.",
+      category: "Document Library",
+      date: "July 2026",
+      fullContent:
+        "Audio interview: the family of the pastor sent to Eswatini speaks out. Download below to listen.",
+      downloadUrl: "/Family-of-Pastor-Sent-to-Eswatini.mp3",
+    },
+    {
+      type: "guide",
       title: "Key Highlights of the Jamaican Constitution",
       description:
         "The Jamaican Constitution, established in 1962, is the cornerstone of the nation's legal framework.",
