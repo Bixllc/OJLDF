@@ -154,6 +154,14 @@ export const EPISODES: Episode[] = [
     time: "7:00 PM EDT / 6:00 PM JT",
     agenda: ["Seeing Reality — Shaping Our Future", "Come and Join the Conversation"],
     videoSrc: "/diaspora-conference-promo.mp4",
+    links: [
+      {
+        label: "Watch on YouTube",
+        url: "https://www.youtube.com/live/RSU2_ctsjx4",
+        kind: "youtube",
+        primary: true,
+      },
+    ],
   },
   {
     seriesId: "diaspora-conf-2026",
@@ -161,6 +169,14 @@ export const EPISODES: Episode[] = [
     published: true,
     title: "2nd Biennial Online Diaspora Conference — Day 2",
     time: "7:00 PM EDT / 6:00 PM JT",
+    links: [
+      {
+        label: "Watch on YouTube",
+        url: "https://www.youtube.com/live/gJmKNQZiL7k",
+        kind: "youtube",
+        primary: true,
+      },
+    ],
   },
   {
     seriesId: "diaspora-conf-2026",
@@ -168,6 +184,14 @@ export const EPISODES: Episode[] = [
     published: true,
     title: "2nd Biennial Online Diaspora Conference — Day 3",
     time: "7:00 PM EDT / 6:00 PM JT",
+    links: [
+      {
+        label: "Watch on YouTube",
+        url: "https://www.youtube.com/live/7CzSpzYiVKM",
+        kind: "youtube",
+        primary: true,
+      },
+    ],
   },
   {
     seriesId: "diaspora-conf-2026",
@@ -175,6 +199,14 @@ export const EPISODES: Episode[] = [
     published: true,
     title: "2nd Biennial Online Diaspora Conference — Day 4",
     time: "7:00 PM EDT / 6:00 PM JT",
+    links: [
+      {
+        label: "Watch on YouTube",
+        url: "https://www.youtube.com/live/776i05vlo6E",
+        kind: "youtube",
+        primary: true,
+      },
+    ],
   },
   {
     seriesId: "diaspora-conf-2026",
@@ -182,6 +214,14 @@ export const EPISODES: Episode[] = [
     published: true,
     title: "2nd Biennial Online Diaspora Conference — Day 5",
     time: "7:00 PM EDT / 6:00 PM JT",
+    links: [
+      {
+        label: "Watch on YouTube",
+        url: "https://www.youtube.com/live/QlkSXug-OoI",
+        kind: "youtube",
+        primary: true,
+      },
+    ],
   },
 
   // =====================
@@ -219,7 +259,7 @@ export const EPISODES: Episode[] = [
     links: [
       {
         label: "Watch on YouTube",
-        url: "https://www.youtube.com/@reasonwithrattigan",
+        url: "https://www.youtube.com/live/l73EZ8MwD5g",
         kind: "youtube",
         primary: true,
       },
@@ -264,7 +304,7 @@ export const EPISODES: Episode[] = [
     links: [
       {
         label: "Watch on YouTube",
-        url: "https://www.youtube.com/@reasonwithrattigan",
+        url: "https://www.youtube.com/live/FxMoO_pFBnE",
         kind: "youtube",
         primary: true,
       },
@@ -310,7 +350,7 @@ export const EPISODES: Episode[] = [
     links: [
       {
         label: "Watch on YouTube",
-        url: "https://www.youtube.com/@reasonwithrattigan",
+        url: "https://www.youtube.com/live/LeqmU9YiBgA",
         kind: "youtube",
         primary: true,
       },
@@ -357,7 +397,7 @@ export const EPISODES: Episode[] = [
     links: [
       {
         label: "Watch on YouTube",
-        url: "https://www.youtube.com/@reasonwithrattigan",
+        url: "https://www.youtube.com/live/MeUgT_rx21s",
         kind: "youtube",
         primary: true,
       },
@@ -404,7 +444,7 @@ export const EPISODES: Episode[] = [
     links: [
       {
         label: "Watch on YouTube",
-        url: "https://www.youtube.com/@reasonwithrattigan",
+        url: "https://www.youtube.com/live/3tt54BjjWqU",
         kind: "youtube",
         primary: true,
       },
@@ -451,7 +491,7 @@ export const EPISODES: Episode[] = [
     links: [
       {
         label: "Watch on YouTube",
-        url: "https://www.youtube.com/@reasonwithrattigan",
+        url: "https://www.youtube.com/live/zR_uIkoidKI",
         kind: "youtube",
         primary: true,
       },
@@ -497,7 +537,7 @@ export const EPISODES: Episode[] = [
     links: [
       {
         label: "Watch on YouTube",
-        url: "https://www.youtube.com/@reasonwithrattigan",
+        url: "https://www.youtube.com/live/aCqlD8TnC_g",
         kind: "youtube",
         primary: true,
       },
@@ -529,13 +569,45 @@ export const EPISODES: Episode[] = [
   },
 
   {
+    seriesId: "reason-sat",
+    date: new Date(2026, 6, 18), // July 18, 2026 (Sat)
+    published: true,
+    title: "Reason With Rattigan",
+    time: "3:00 PM NY / 2:00 PM JA",
+    description:
+      "CLASS STARTS PROMPTLY TODAY AT 3PM (NY) / 2PM (JAMAICA) ON \"REASON WITH RATTIGAN\" VIA REGGAE GLOBAL RADIO AND YOUTUBE.",
+    agenda: [
+      "WHAT IS AUDREY MARKS' REAL ROLE IN GOVERNMENT?",
+      "THE \"INTEGRITY\" COMMISSION - A TOOTHLESS AND BLIND TIGER CUB",
+    ],
+    links: [
+      {
+        label: "Watch on YouTube",
+        url: "https://www.youtube.com/live/5V5q436q79A",
+        kind: "youtube",
+        primary: true,
+      },
+      {
+        label: "Listen on Reggae Global Radio",
+        url: "https://reggaeglobalradio.com/",
+        kind: "radio",
+      },
+      {
+        label: "Newsletter",
+        url: "https://globaldigital.createsend1.com/t/d-e-sdjkytd-l-i/",
+        kind: "website",
+      },
+    ],
+  },
+
+  {
     seriesId: "come-reason-wed",
-    date: new Date(2026, 6, 8), // July 8, 2026 (Wed)
+    date: new Date(2026, 6, 15), // July 15, 2026 (Wed)
     published: true,
     links: [
       {
         label: "Watch Live on YouTube",
-        url: "https://www.youtube.com/live/vaFVKWIv5rs?si=H3gpc69iIXtCsAyo",
+        url: "https://www.youtube.com/live/1ydrKzgzl2U?si=BTeAghRfhSHykiJy",
         kind: "youtube",
         primary: true,
       },
@@ -560,7 +632,7 @@ export const EPISODES: Episode[] = [
     links: [
       {
         label: "Watch on YouTube",
-        url: "https://www.youtube.com/@reasonwithrattigan",
+        url: "https://www.youtube.com/live/_wuCj8HhrUM",
         kind: "youtube",
         primary: true,
       },
@@ -574,12 +646,12 @@ export const EPISODES: Episode[] = [
 
   {
     seriesId: "come-reason-wed",
-    date: new Date(2026, 6, 15), // July 15, 2026 (Wed)
+    date: new Date(2026, 6, 8), // July 8, 2026 (Wed)
     published: true,
     links: [
       {
         label: "Watch Live on YouTube",
-        url: "https://www.youtube.com/live/1ydrKzgzl2U?si=BTeAghRfhSHykiJy",
+        url: "https://www.youtube.com/live/vaFVKWIv5rs?si=H3gpc69iIXtCsAyo",
         kind: "youtube",
         primary: true,
       },
@@ -588,20 +660,21 @@ export const EPISODES: Episode[] = [
 
   {
     seriesId: "reason-sat",
-    date: new Date(2026, 6, 18), // July 18, 2026 (Sat)
+    date: new Date(2026, 6, 4), // July 4, 2026 (Sat)
     published: true,
     title: "Reason With Rattigan",
     time: "3:00 PM NY / 2:00 PM JA",
     description:
       "CLASS STARTS PROMPTLY TODAY AT 3PM (NY) / 2PM (JAMAICA) ON \"REASON WITH RATTIGAN\" VIA REGGAE GLOBAL RADIO AND YOUTUBE.",
     agenda: [
-      "WHAT IS AUDREY MARKS' REAL ROLE IN GOVERNMENT?",
-      "THE \"INTEGRITY\" COMMISSION - A TOOTHLESS AND BLIND TIGER CUB",
+      "DID MINISTER AUDREY MARKS' SPEECH REMOVE THE DOUBTS ABOUT HER (IN)COMPETENCE?",
+      "TCN PROGRAM: THE USG'S CLEARLY STATED POSITION",
+      "WHO \"LEAKED\" THE DIPLOMATIC NOTE/MOU TO THE MEDIA? WHY?",
     ],
     links: [
       {
         label: "Watch on YouTube",
-        url: "https://www.youtube.com/@reasonwithrattigan",
+        url: "https://www.youtube.com/live/cvmQBa0R0HA",
         kind: "youtube",
         primary: true,
       },
@@ -651,39 +724,6 @@ export const EPISODES: Episode[] = [
 
   {
     seriesId: "reason-sat",
-    date: new Date(2026, 6, 4), // July 4, 2026 (Sat)
-    published: true,
-    title: "Reason With Rattigan",
-    time: "3:00 PM NY / 2:00 PM JA",
-    description:
-      "CLASS STARTS PROMPTLY TODAY AT 3PM (NY) / 2PM (JAMAICA) ON \"REASON WITH RATTIGAN\" VIA REGGAE GLOBAL RADIO AND YOUTUBE.",
-    agenda: [
-      "DID MINISTER AUDREY MARKS' SPEECH REMOVE THE DOUBTS ABOUT HER (IN)COMPETENCE?",
-      "TCN PROGRAM: THE USG'S CLEARLY STATED POSITION",
-      "WHO \"LEAKED\" THE DIPLOMATIC NOTE/MOU TO THE MEDIA? WHY?",
-    ],
-    links: [
-      {
-        label: "Watch on YouTube",
-        url: "https://www.youtube.com/@reasonwithrattigan",
-        kind: "youtube",
-        primary: true,
-      },
-      {
-        label: "Listen on Reggae Global Radio",
-        url: "https://reggaeglobalradio.com/",
-        kind: "radio",
-      },
-      {
-        label: "Newsletter",
-        url: "https://globaldigital.createsend1.com/t/d-e-sdjkytd-l-i/",
-        kind: "website",
-      },
-    ],
-  },
-
-  {
-    seriesId: "reason-sat",
     date: new Date(2026, 5, 27), // June 27, 2026 (Sat)
     published: true,
     title: "Reason With Rattigan",
@@ -696,7 +736,7 @@ export const EPISODES: Episode[] = [
     links: [
       {
         label: "Watch on YouTube",
-        url: "https://www.youtube.com/@reasonwithrattigan",
+        url: "https://www.youtube.com/live/8Dz4N9RVQ7Q",
         kind: "youtube",
         primary: true,
       },
@@ -760,7 +800,7 @@ export const EPISODES: Episode[] = [
     links: [
       {
         label: "Watch on YouTube",
-        url: "https://www.youtube.com/@reasonwithrattigan",
+        url: "https://www.youtube.com/live/LZy88laeyts",
         kind: "youtube",
         primary: true,
       },
@@ -804,7 +844,7 @@ export const EPISODES: Episode[] = [
     links: [
       {
         label: "Watch on YouTube",
-        url: "https://www.youtube.com/@reasonwithrattigan",
+        url: "https://www.youtube.com/live/ibgyxcRezQ4",
         kind: "youtube",
         primary: true,
       },
@@ -891,7 +931,7 @@ export const EPISODES: Episode[] = [
     links: [
       {
         label: "Watch on YouTube",
-        url: "https://www.youtube.com/@OJLDF",
+        url: "https://www.youtube.com/live/tWh6cY6EaN4",
         kind: "youtube",
         primary: true,
       },
@@ -909,6 +949,20 @@ export const EPISODES: Episode[] = [
   },
 
   {
+    seriesId: "come-reason-wed",
+    date: new Date(2026, 4, 13), // May 13, 2026 (Wed)
+    published: true,
+    links: [
+      {
+        label: "Watch Live on YouTube",
+        url: "https://www.youtube.com/live/uyRfV2Sj5Jk",
+        kind: "youtube",
+        primary: true,
+      },
+    ],
+  },
+
+  {
     seriesId: "reason-sat",
     date: new Date(2026, 4, 9), // May 9, 2026 (Sat)
     published: true,
@@ -921,7 +975,7 @@ export const EPISODES: Episode[] = [
     links: [
       {
         label: "Watch on YouTube",
-        url: "https://www.youtube.com/@OJLDF",
+        url: "https://www.youtube.com/live/_yt0Vr82pA0",
         kind: "youtube",
         primary: true,
       },
@@ -934,6 +988,258 @@ export const EPISODES: Episode[] = [
         label: "Newsletter",
         url: "https://globaldigital.createsend1.com/t/d-e-sdjkytd-l-i/",
         kind: "website",
+      },
+    ],
+  },
+
+  {
+    seriesId: "come-reason-wed",
+    date: new Date(2026, 3, 29), // April 29, 2026 (Wed)
+    published: true,
+    links: [
+      {
+        label: "Watch Live on YouTube",
+        url: "https://www.youtube.com/live/hFVaE5PrndU",
+        kind: "youtube",
+        primary: true,
+      },
+    ],
+  },
+
+  {
+    seriesId: "reason-sat",
+    date: new Date(2026, 3, 25), // April 25, 2026 (Sat)
+    published: true,
+    title: "Reason With Rattigan",
+    time: "3:00 PM NY / 2:00 PM JA",
+    description:
+      "NaRRA ⎮ Ethics Committee: Chickens Coming Home To Roost ⎮ Speaker Holness & Cuthbert-Flynn Statement",
+    links: [
+      {
+        label: "Watch on YouTube",
+        url: "https://www.youtube.com/live/e4WCXhiw-3g",
+        kind: "youtube",
+        primary: true,
+      },
+      {
+        label: "Listen on Reggae Global Radio",
+        url: "https://reggaeglobalradio.com/",
+        kind: "radio",
+      },
+      {
+        label: "Newsletter",
+        url: "https://globaldigital.createsend1.com/t/d-e-sdjkytd-l-i/",
+        kind: "website",
+      },
+    ],
+  },
+
+  {
+    seriesId: "come-reason-wed",
+    date: new Date(2026, 3, 22), // April 22, 2026 (Wed)
+    published: true,
+    links: [
+      {
+        label: "Watch Live on YouTube",
+        url: "https://www.youtube.com/live/CLt1_d6b7EQ",
+        kind: "youtube",
+        primary: true,
+      },
+    ],
+  },
+
+  {
+    seriesId: "reason-sat",
+    date: new Date(2026, 3, 18), // April 18, 2026 (Sat)
+    published: true,
+    title: "Reason With Rattigan",
+    time: "3:00 PM NY / 2:00 PM JA",
+    description:
+      "Speaker Holness Gives Rattigan Advice; Gov’t Badness, Ignorance Or Standing Orders-Nigerian Diaspora",
+    links: [
+      {
+        label: "Watch on YouTube",
+        url: "https://www.youtube.com/live/SAO79GnhADQ",
+        kind: "youtube",
+        primary: true,
+      },
+      {
+        label: "Listen on Reggae Global Radio",
+        url: "https://reggaeglobalradio.com/",
+        kind: "radio",
+      },
+      {
+        label: "Newsletter",
+        url: "https://globaldigital.createsend1.com/t/d-e-sdjkytd-l-i/",
+        kind: "website",
+      },
+    ],
+  },
+
+  {
+    seriesId: "come-reason-wed",
+    date: new Date(2026, 3, 15), // April 15, 2026 (Wed)
+    published: true,
+    links: [
+      {
+        label: "Watch Live on YouTube",
+        url: "https://www.youtube.com/live/Htt1QtjA0_4",
+        kind: "youtube",
+        primary: true,
+      },
+    ],
+  },
+
+  {
+    seriesId: "reason-sat",
+    date: new Date(2026, 3, 11), // April 11, 2026 (Sat)
+    published: true,
+    title: "Reason With Rattigan",
+    time: "3:00 PM NY / 2:00 PM JA",
+    description:
+      "If Terrelongue Touts Success, Why Should The Diaspora Cont'd Sending Remittances? MP's Role? UHWI",
+    links: [
+      {
+        label: "Watch on YouTube",
+        url: "https://www.youtube.com/live/606p2REZG8U",
+        kind: "youtube",
+        primary: true,
+      },
+      {
+        label: "Listen on Reggae Global Radio",
+        url: "https://reggaeglobalradio.com/",
+        kind: "radio",
+      },
+      {
+        label: "Newsletter",
+        url: "https://globaldigital.createsend1.com/t/d-e-sdjkytd-l-i/",
+        kind: "website",
+      },
+    ],
+  },
+
+  {
+    seriesId: "come-reason-wed",
+    date: new Date(2026, 3, 8), // April 8, 2026 (Wed)
+    published: true,
+    links: [
+      {
+        label: "Watch Live on YouTube",
+        url: "https://www.youtube.com/live/2nOqr6V3IKk",
+        kind: "youtube",
+        primary: true,
+      },
+    ],
+  },
+
+  {
+    seriesId: "reason-sat",
+    date: new Date(2026, 3, 4), // April 4, 2026 (Sat)
+    published: true,
+    title: "Reason With Rattigan",
+    time: "3:00 PM NY / 2:00 PM JA",
+    description:
+      "Pamela Monroe-Ellis Saving Taxpayers? Prosperity-Politicians But Promises-Poor Constitutional Crisis",
+    links: [
+      {
+        label: "Watch on YouTube",
+        url: "https://www.youtube.com/live/CQvi4c9x-JY",
+        kind: "youtube",
+        primary: true,
+      },
+      {
+        label: "Listen on Reggae Global Radio",
+        url: "https://reggaeglobalradio.com/",
+        kind: "radio",
+      },
+      {
+        label: "Newsletter",
+        url: "https://globaldigital.createsend1.com/t/d-e-sdjkytd-l-i/",
+        kind: "website",
+      },
+    ],
+  },
+
+  {
+    seriesId: "come-reason-wed",
+    date: new Date(2026, 3, 1), // April 1, 2026 (Wed)
+    published: true,
+    links: [
+      {
+        label: "Watch Live on YouTube",
+        url: "https://www.youtube.com/live/AVkWvVv_W3Q",
+        kind: "youtube",
+        primary: true,
+      },
+    ],
+  },
+
+  {
+    seriesId: "reason-sat",
+    date: new Date(2026, 2, 28), // March 28, 2026 (Sat)
+    published: true,
+    title: "Reason With Rattigan",
+    time: "3:00 PM NY / 2:00 PM JA",
+    description:
+      "Are J’Cans Prime For Plunder? Ignorance Ambiguity & Fear = Prosperity For Politicians-Not The People",
+    links: [
+      {
+        label: "Watch on YouTube",
+        url: "https://www.youtube.com/live/9ugGhm1fTWQ",
+        kind: "youtube",
+        primary: true,
+      },
+      {
+        label: "Listen on Reggae Global Radio",
+        url: "https://reggaeglobalradio.com/",
+        kind: "radio",
+      },
+      {
+        label: "Newsletter",
+        url: "https://globaldigital.createsend1.com/t/d-e-sdjkytd-l-i/",
+        kind: "website",
+      },
+    ],
+  },
+
+  {
+    seriesId: "reason-sat",
+    date: new Date(2026, 2, 21), // March 21, 2026 (Sat)
+    published: true,
+    title: "Reason With Rattigan",
+    time: "3:00 PM NY / 2:00 PM JA",
+    description:
+      "Are There Thieves, Liars, Criminals, & Dunces in Parliament? Suffering Voters-Third Party of 5 Rule.",
+    links: [
+      {
+        label: "Watch on YouTube",
+        url: "https://www.youtube.com/live/5J_T0ldZMjM",
+        kind: "youtube",
+        primary: true,
+      },
+      {
+        label: "Listen on Reggae Global Radio",
+        url: "https://reggaeglobalradio.com/",
+        kind: "radio",
+      },
+      {
+        label: "Newsletter",
+        url: "https://globaldigital.createsend1.com/t/d-e-sdjkytd-l-i/",
+        kind: "website",
+      },
+    ],
+  },
+
+  {
+    seriesId: "come-reason-wed",
+    date: new Date(2026, 2, 18), // March 18, 2026 (Wed)
+    published: true,
+    links: [
+      {
+        label: "Watch Live on YouTube",
+        url: "https://www.youtube.com/live/mgsQHGfFZr4",
+        kind: "youtube",
+        primary: true,
       },
     ],
   },
@@ -955,7 +1261,7 @@ export const EPISODES: Episode[] = [
     links: [
       {
         label: "Watch on YouTube",
-        url: "https://www.youtube.com/@reasonwithrattigan",
+        url: "https://www.youtube.com/live/fGGwnbrxbCk",
         kind: "youtube",
         primary: true,
       },
@@ -1001,7 +1307,7 @@ export const EPISODES: Episode[] = [
     links: [
       {
         label: "Watch on YouTube",
-        url: "https://www.youtube.com/@reasonwithrattigan",
+        url: "https://www.youtube.com/live/e-UoKI_V3XU",
         kind: "youtube",
         primary: true,
       },
@@ -1027,6 +1333,14 @@ export const EPISODES: Episode[] = [
       "UPDATE ON MINISTER DARYL VAZ AND THE RURAL SCHOOL BUS PROGRAM",
       "MOROCCAN FERTILIZER: THE AUDITOR GENERAL HAS SPOKEN - WHO WILL PAY?",
       "UNDER WHAT CIRCUMSTANCES WOULD JAMAICANS ALLOW A THIRD PARTY TO LEAD THE COUNTRY?",
+    ],
+    links: [
+      {
+        label: "Watch on YouTube",
+        url: "https://www.youtube.com/live/NRU0_-yChg4",
+        kind: "youtube",
+        primary: true,
+      },
     ],
   },
 
@@ -1058,6 +1372,20 @@ export const EPISODES: Episode[] = [
   },
 
   {
+    seriesId: "come-reason-wed",
+    date: new Date(2026, 1, 11), // February 11, 2026 (Wed)
+    published: true,
+    links: [
+      {
+        label: "Watch Live on YouTube",
+        url: "https://www.youtube.com/live/-e8Q_iuezAY",
+        kind: "youtube",
+        primary: true,
+      },
+    ],
+  },
+
+  {
     seriesId: "reason-sat",
     date: new Date(2026, 1, 7), // Feb 7, 2026 (Sat)
     published: true,
@@ -1069,6 +1397,20 @@ export const EPISODES: Episode[] = [
       "BANKRUPTCY RELIEF FOR THE AVERAGE PERSON",
       "BEACH ACCESS FOR ALL",
       "UPCOMING DIASPORA CONFERENCE IN MONTEGO BAY",
+    ],
+  },
+
+  {
+    seriesId: "come-reason-wed",
+    date: new Date(2026, 1, 4), // February 4, 2026 (Wed)
+    published: true,
+    links: [
+      {
+        label: "Watch Live on YouTube",
+        url: "https://www.youtube.com/live/HBVkQtIojC4",
+        kind: "youtube",
+        primary: true,
+      },
     ],
   },
 
@@ -1086,6 +1428,20 @@ export const EPISODES: Episode[] = [
   },
 
   {
+    seriesId: "come-reason-wed",
+    date: new Date(2026, 0, 28), // January 28, 2026 (Wed)
+    published: true,
+    links: [
+      {
+        label: "Watch Live on YouTube",
+        url: "https://www.youtube.com/live/KnBVvx-bp28",
+        kind: "youtube",
+        primary: true,
+      },
+    ],
+  },
+
+  {
     seriesId: "reason-sat",
     date: new Date(2026, 0, 24), // Jan 24, 2026 (Sat)
     published: true,
@@ -1094,6 +1450,20 @@ export const EPISODES: Episode[] = [
       '"UNACCOUNTED" MOROCCAN FERTILIZER: THE AUDITOR GENERAL\'S BOLD MOVE',
       "FINANCIAL SCANDAL AT THE UHWI: ANOTHER 9-DAY WONDER?",
       "DIASPORA ELECTION: SIGNIFICANT EVIDENCE OF ELECTION MANIPULATION",
+    ],
+  },
+
+  {
+    seriesId: "come-reason-wed",
+    date: new Date(2026, 0, 21), // January 21, 2026 (Wed)
+    published: true,
+    links: [
+      {
+        label: "Watch Live on YouTube",
+        url: "https://www.youtube.com/live/sjcwfLbb0lk",
+        kind: "youtube",
+        primary: true,
+      },
     ],
   },
 
