@@ -3,6 +3,7 @@
 import * as React from 'react';
 import Image from 'next/image';
 import { Heart, Radio, Video } from 'lucide-react';
+import { SHOW_BANNER } from '@/lib/banner';
 
 type JamaicaImage = { url: string; alt: string };
 
@@ -242,11 +243,15 @@ export default function Hero() {
               <div>
                 <div className="flex items-center gap-3 mb-1">
                   <span className="rounded-full bg-white px-3 py-1 text-xs font-bold text-red-600">
-                     🎬 WATCH THE RECAP
+                    {SHOW_BANNER.mode === 'live'
+                      ? `🔴 LIVE TODAY · ${SHOW_BANNER.startTime}`
+                      : '🎬 WATCH THE RECAP'}
                   </span>
-                  <h3 className="font-semibold">Reason With Rattigan</h3>
+                  <h3 className="font-semibold">{SHOW_BANNER.title}</h3>
                 </div>
-                <p className="text-white/90">WILL ANDREW HOLNESS&apos; SEAT BE VACANT AFTER FEBRUARY 10, 2027? • THE HISTORY, ROLE, AND EFFECT OF THE PUBLIC ACCOUNTS COMMITTEE • PARLIAMENT AND THE U.N. CUBAN VOTE DEBACLE</p>
+                {SHOW_BANNER.topics.length > 0 && (
+                  <p className="text-white/90">{SHOW_BANNER.topics.join(' • ')}</p>
+                )}
               </div>
             </div>
 
@@ -262,13 +267,13 @@ export default function Hero() {
               </a>
 
              <a
-              href="https://www.youtube.com/live/yUlDj9Jv1Lc"
+              href={SHOW_BANNER.watchUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center whitespace-nowrap rounded-xl bg-white px-6 py-3 font-semibold text-red-600 shadow-lg hover:bg-gray-100"
             >
               <Video className="w-5 h-5 mr-2" />
-              Watch the Recap
+              {SHOW_BANNER.mode === 'live' ? 'Watch Live' : 'Watch the Recap'}
             </a>
             </div>
           </div>
