@@ -246,7 +246,7 @@ export default function Hero() {
                   </span>
                   <h3 className="font-semibold">Reason With Rattigan</h3>
                 </div>
-                <p className="text-white/90">MINISTER TUFTON AND THE HEALTH SECTOR CRISIS, PT. 2 • MINISTER SAMUDA: IN THE ABUNDANCE OF WATER THERE IS DROUGHT • SUMMER EXAM RESULTS</p>
+                <p className="text-white/90">WILL ANDREW HOLNESS&apos; SEAT BE VACANT AFTER FEBRUARY 10, 2027? • THE HISTORY, ROLE, AND EFFECT OF THE PUBLIC ACCOUNTS COMMITTEE • PARLIAMENT AND THE U.N. CUBAN VOTE DEBACLE</p>
               </div>
             </div>
 
@@ -262,7 +262,7 @@ export default function Hero() {
               </a>
 
              <a
-              href="https://www.youtube.com/live/l73EZ8MwD5g"
+              href="https://www.youtube.com/live/yUlDj9Jv1Lc"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center whitespace-nowrap rounded-xl bg-white px-6 py-3 font-semibold text-red-600 shadow-lg hover:bg-gray-100"

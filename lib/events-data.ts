@@ -230,6 +230,390 @@ export const EPISODES: Episode[] = [
   // =====================
 
   {
+    seriesId: "reason-sat",
+    date: new Date(2026, 10, 7), // November 7, 2026 (Sat)
+    published: true,
+    title: "Reason With Rattigan",
+    time: "3:00 PM NY / 2:00 PM JA",
+    description:
+      "CLASS STARTS PROMPTLY TODAY AT 3PM (NY) / 2PM (JAMAICA) ON \"REASON WITH RATTIGAN\" VIA REGGAE GLOBAL RADIO AND YOUTUBE. SPECIAL GUESTS: MP JULIAN ROBINSON; SOUTH AFRICAN ANALYST ANDY MASHAILE; SOCIAL MEDIA HOST COLIN BELL.",
+    agenda: [
+      "WILL ANDREW HOLNESS' SEAT BE VACANT AFTER FEBRUARY 10, 2027? WHO ARE BEING CONSIDERED BY THE JLP TO REPLACE HIM AS PM?",
+      "THE HISTORY, ROLE, AND EFFECT OF THE PUBLIC ACCOUNTS COMMITTEE",
+      "PARLIAMENT AND THE U.N. CUBAN VOTE DEBACLE",
+    ],
+    links: [
+      {
+        label: "Watch on YouTube",
+        url: "https://www.youtube.com/live/yUlDj9Jv1Lc",
+        kind: "youtube",
+        primary: true,
+      },
+      {
+        label: "Listen on Reggae Global Radio",
+        url: "https://reggaeglobalradio.com/",
+        kind: "radio",
+      },
+      {
+        label: "Newsletter",
+        url: "https://globaldigital.createsend1.com/t/d-e-sdjkytd-l-i/",
+        kind: "website",
+      },
+    ],
+  },
+
+  {
+    seriesId: "come-reason-wed",
+    date: new Date(2026, 10, 4), // November 4, 2026 (Wed)
+    published: true,
+    links: [
+      {
+        label: "Watch Live on YouTube",
+        url: "https://www.youtube.com/live/b66Ps30SsWI",
+        kind: "youtube",
+        primary: true,
+      },
+    ],
+  },
+
+  {
+    seriesId: "reason-sat",
+    date: new Date(2026, 9, 31), // October 31, 2026 (Sat)
+    published: true,
+    title: "Reason With Rattigan",
+    time: "3:00 PM NY / 2:00 PM JA",
+    description:
+      "CLASS STARTS PROMPTLY TODAY AT 3PM (NY) / 2PM (JAMAICA) ON \"REASON WITH RATTIGAN\" VIA REGGAE GLOBAL RADIO AND YOUTUBE.",
+    agenda: [
+      "\"BEENIE MAN\" VS. HOLNESS: THE CREATION, MANAGEMENT, AND CONTINUING DESTRUCTION OF \"BRAND JAMAICA\"",
+      "DECODING ANDREW HOLNESS, PT. 2",
+      "WORDS V. ACTION: EVALUATING JAMAICA'S VOTE ON THE CUBAN EMBARGO",
+    ],
+    links: [
+      {
+        label: "Watch on YouTube",
+        url: "https://www.youtube.com/live/18oeiwoURHw",
+        kind: "youtube",
+        primary: true,
+      },
+      {
+        label: "Listen on Reggae Global Radio",
+        url: "https://reggaeglobalradio.com/",
+        kind: "radio",
+      },
+      {
+        label: "Newsletter",
+        url: "https://globaldigital.createsend1.com/t/d-e-sdjkytd-l-i/",
+        kind: "website",
+      },
+    ],
+  },
+
+  {
+    seriesId: "come-reason-wed",
+    date: new Date(2026, 9, 28), // October 28, 2026 (Wed)
+    published: true,
+    links: [
+      {
+        label: "Watch Live on YouTube",
+        url: "https://www.youtube.com/live/ZzTv_BMQhpk?si=GatOkBRUlMdzlRKJ",
+        kind: "youtube",
+        primary: true,
+      },
+    ],
+  },
+
+  {
+    seriesId: "reason-sat",
+    date: new Date(2026, 9, 24), // October 24, 2026 (Sat)
+    published: true,
+    title: "Reason With Rattigan",
+    time: "3:00 PM NY / 2:00 PM JA",
+    description:
+      "CLASS STARTS PROMPTLY TODAY AT 3PM (NY) / 2PM (JAMAICA) ON \"REASON WITH RATTIGAN\" VIA REGGAE GLOBAL RADIO AND YOUTUBE.",
+    agenda: [
+      "OFFICIAL OVERSEAS TRAVEL FOR GOVERNMENT OFFICIALS SUSPENDED: COULD THE U.S., CHINA, CUBA, AND/OR DRUGS BE THE REAL ISSUE?",
+      "DECODING ANDREW HOLNESS, PT. 2: PSYCHOLOGY, RHETORIC, AND POLITICAL LEADERSHIP OF JAMAICA'S PRIME MINISTER",
+    ],
+    links: [
+      {
+        label: "Watch on YouTube",
+        url: "https://www.youtube.com/live/gZ1D9tMJ2rY",
+        kind: "youtube",
+        primary: true,
+      },
+      {
+        label: "Listen on Reggae Global Radio",
+        url: "https://reggaeglobalradio.com/",
+        kind: "radio",
+      },
+      {
+        label: "Newsletter",
+        url: "https://globaldigital.createsend1.com/t/d-e-sdjkytd-l-i/",
+        kind: "website",
+      },
+    ],
+  },
+
+  {
+    seriesId: "come-reason-wed",
+    date: new Date(2026, 9, 21), // October 21, 2026 (Wed)
+    published: true,
+    links: [
+      {
+        label: "Watch Live on YouTube",
+        url: "https://www.youtube.com/live/Mgyz9OiH_vs",
+        kind: "youtube",
+        primary: true,
+      },
+    ],
+  },
+
+  {
+    seriesId: "reason-sat",
+    date: new Date(2026, 9, 17), // October 17, 2026 (Sat)
+    published: true,
+    title: "Reason With Rattigan",
+    time: "3:00 PM NY / 2:00 PM JA",
+    description:
+      "CLASS STARTS PROMPTLY TODAY AT 3PM (NY) / 2PM (JAMAICA) ON \"REASON WITH RATTIGAN\" VIA REGGAE GLOBAL RADIO AND YOUTUBE.",
+    agenda: [
+      "DECODING ANDREW HOLNESS: PSYCHOLOGY, RHETORIC, AND POLITICAL LEADERSHIP OF JAMAICA'S PRIME MINISTER",
+    ],
+    links: [
+      {
+        label: "Watch on YouTube",
+        url: "https://www.youtube.com/live/tXS7VU-GMZQ",
+        kind: "youtube",
+        primary: true,
+      },
+      {
+        label: "Listen on Reggae Global Radio",
+        url: "https://reggaeglobalradio.com/",
+        kind: "radio",
+      },
+      {
+        label: "Newsletter",
+        url: "https://globaldigital.createsend1.com/t/d-e-sdjkytd-l-i/",
+        kind: "website",
+      },
+    ],
+  },
+
+  {
+    seriesId: "come-reason-wed",
+    date: new Date(2026, 9, 14), // October 14, 2026 (Wed)
+    published: true,
+    links: [
+      {
+        label: "Watch Live on YouTube",
+        url: "https://www.youtube.com/live/09mXIFOZ4RE",
+        kind: "youtube",
+        primary: true,
+      },
+    ],
+  },
+
+  {
+    seriesId: "reason-sat",
+    date: new Date(2026, 9, 10), // October 10, 2026 (Sat)
+    published: true,
+    title: "Reason With Rattigan",
+    time: "3:00 PM NY / 2:00 PM JA",
+    description:
+      "CLASS STARTS PROMPTLY TODAY AT 3PM (NY) / 2PM (JAMAICA) ON \"REASON WITH RATTIGAN\" VIA REGGAE GLOBAL RADIO AND YOUTUBE.",
+    agenda: [
+      "A CULTURE OF FAILURE: CORRUPTION AND INCOMPETENCE IN THE JAMAICAN GOVERNMENT",
+    ],
+    links: [
+      {
+        label: "Watch on YouTube",
+        url: "https://www.youtube.com/live/fC1gzdMJuK8",
+        kind: "youtube",
+        primary: true,
+      },
+      {
+        label: "Listen on Reggae Global Radio",
+        url: "https://reggaeglobalradio.com/",
+        kind: "radio",
+      },
+    ],
+  },
+
+  {
+    seriesId: "reason-sat",
+    date: new Date(2026, 9, 3), // October 3, 2026 (Sat)
+    published: true,
+    title: "Reason With Rattigan",
+    time: "3:00 PM NY / 2:00 PM JA",
+    description:
+      "CLASS STARTS PROMPTLY TODAY AT 3PM (NY) / 2PM (JAMAICA) ON \"REASON WITH RATTIGAN\" VIA REGGAE GLOBAL RADIO AND YOUTUBE.",
+    agenda: [
+      "FACTS CONCERNING SLAVERY, REPARATIONS PETITION, RETURN OF ARTIFACTS, AND TRAVEL TO THE U.K.",
+      "BOMBSHELL QUESTIONS ABOUT THE ROUTE/COST OF THE GHANAIAN NURSES' AIR TRAVEL TO JAMAICA",
+      "PARLIAMENTARIANS' MISUNDERSTANDING OF THE STANDING ORDERS.",
+    ],
+    links: [
+      {
+        label: "Watch on YouTube",
+        url: "https://www.youtube.com/live/RuhjG0SBz9U",
+        kind: "youtube",
+        primary: true,
+      },
+      {
+        label: "Listen on Reggae Global Radio",
+        url: "https://reggaeglobalradio.com/",
+        kind: "radio",
+      },
+      {
+        label: "Newsletter",
+        url: "https://globaldigital.createsend1.com/t/d-e-sdjkytd-l-i/",
+        kind: "website",
+      },
+    ],
+  },
+
+  {
+    seriesId: "come-reason-wed",
+    date: new Date(2026, 8, 30), // September 30, 2026 (Wed)
+    published: true,
+    links: [
+      {
+        label: "Watch Live on YouTube",
+        url: "https://www.youtube.com/live/xkt8MHi0VNk?si=16-_9QuimU5JT9zc",
+        kind: "youtube",
+        primary: true,
+      },
+    ],
+  },
+
+  {
+    seriesId: "reason-sat",
+    date: new Date(2026, 8, 26), // September 26, 2026 (Sat)
+    published: true,
+    title: "Reason With Rattigan",
+    time: "3:00 PM NY / 2:00 PM JA",
+    description:
+      "CLASS STARTS PROMPTLY TODAY AT 3PM (NY) / 2PM (JAMAICA) ON \"REASON WITH RATTIGAN\" VIA REGGAE GLOBAL RADIO AND YOUTUBE.",
+    agenda: [
+      "GHANAIAN NURSES COMING TO JAMAICA: THE TRUTH REVEALED",
+      "FUNDAMENTALS OF THE STANDING ORDERS: ADVICE TO THOSE CONCERNED",
+      "REPARATIONS: THE COMPREHENSIVE STORY",
+    ],
+    links: [
+      {
+        label: "Watch on YouTube",
+        url: "https://www.youtube.com/live/Ga9tJJYDAdg",
+        kind: "youtube",
+        primary: true,
+      },
+      {
+        label: "Listen on Reggae Global Radio",
+        url: "https://reggaeglobalradio.com/",
+        kind: "radio",
+      },
+      {
+        label: "Newsletter",
+        url: "https://globaldigital.createsend1.com/t/d-e-sdjkytd-l-i/",
+        kind: "website",
+      },
+    ],
+  },
+
+  {
+    seriesId: "come-reason-wed",
+    date: new Date(2026, 8, 23), // September 23, 2026 (Wed)
+    published: true,
+    links: [
+      {
+        label: "Watch Live on YouTube",
+        url: "https://www.youtube.com/live/LzaNUALChBM",
+        kind: "youtube",
+        primary: true,
+      },
+    ],
+  },
+
+  {
+    seriesId: "reason-sat",
+    date: new Date(2026, 8, 19), // September 19, 2026 (Sat)
+    published: true,
+    title: "Reason With Rattigan",
+    time: "3:00 PM NY / 2:00 PM JA",
+    description:
+      "CLASS STARTS PROMPTLY TODAY AT 3PM (NY) / 2PM (JAMAICA) ON \"REASON WITH RATTIGAN\" VIA REGGAE GLOBAL RADIO AND YOUTUBE.",
+    agenda: [
+      "MINISTERS CHANG, MORRIS-DIXON, AND JOHNSON SMITH: LIARS OR NITWITS?",
+      "THE BEST APPROACH FOR REPARATIONS: LEGAL OR MORAL?",
+    ],
+    links: [
+      {
+        label: "Watch on YouTube",
+        url: "https://www.youtube.com/live/cvWpVPdZBpA",
+        kind: "youtube",
+        primary: true,
+      },
+      {
+        label: "Listen on Reggae Global Radio",
+        url: "https://reggaeglobalradio.com/",
+        kind: "radio",
+      },
+      {
+        label: "Newsletter",
+        url: "https://globaldigital.createsend1.com/t/d-e-sdjkytd-l-i/",
+        kind: "website",
+      },
+    ],
+  },
+
+  {
+    seriesId: "come-reason-wed",
+    date: new Date(2026, 8, 16), // September 16, 2026 (Wed)
+    published: true,
+    links: [
+      {
+        label: "Watch Live on YouTube",
+        url: "https://www.youtube.com/live/yUrPGnNVuHQ?si=jL-jKAnjbcuRlxpG",
+        kind: "youtube",
+        primary: true,
+      },
+    ],
+  },
+
+  {
+    seriesId: "reason-sat",
+    date: new Date(2026, 8, 12), // September 12, 2026 (Sat)
+    published: true,
+    title: "Reason With Rattigan",
+    time: "3:00 PM NY / 2:00 PM JA",
+    description:
+      "CLASS STARTS PROMPTLY TODAY AT 3PM (NY) / 2PM (JAMAICA) ON \"REASON WITH RATTIGAN\" VIA REGGAE GLOBAL RADIO AND YOUTUBE.",
+    agenda: [
+      "EXPOSING THE BLUNDERS ON THE REPARATION ISSUE",
+      "MINISTER SAMUDA AND THE WATER CRISIS, PT. 2",
+      "WHY AREN'T PARLIAMENTARIANS USING \"RULE 77A\" FOR ACCOUNTABILITY AND TRANSPARENCY?",
+    ],
+    links: [
+      {
+        label: "Watch on YouTube",
+        url: "https://www.youtube.com/live/evDn31Jx8YQ",
+        kind: "youtube",
+        primary: true,
+      },
+      {
+        label: "Listen on Reggae Global Radio",
+        url: "https://reggaeglobalradio.com/",
+        kind: "radio",
+      },
+      {
+        label: "Newsletter",
+        url: "https://globaldigital.createsend1.com/t/d-e-sdjkytd-l-i/",
+        kind: "website",
+      },
+    ],
+  },
+
+  {
     seriesId: "come-reason-wed",
     date: new Date(2026, 8, 9), // September 9, 2026 (Wed)
     published: true,
