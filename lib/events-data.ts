@@ -230,6 +230,20 @@ export const EPISODES: Episode[] = [
   // =====================
 
   {
+    seriesId: "come-reason-wed",
+    date: new Date(2026, 10, 11), // November 11, 2026 (Wed)
+    published: true,
+    links: [
+      {
+        label: "Watch Live on YouTube",
+        url: "https://www.youtube.com/live/GWWrLI9MAkM?si=kbgyFqjPq9O5PQwC",
+        kind: "youtube",
+        primary: true,
+      },
+    ],
+  },
+
+  {
     seriesId: "reason-sat",
     date: new Date(2026, 10, 7), // November 7, 2026 (Sat)
     published: true,

@@ -20,14 +20,10 @@ export type ShowBanner = {
 };
 
 export const SHOW_BANNER: ShowBanner = {
-  mode: "recap",
-  title: "Reason With Rattigan",
-  date: "2026-11-07",
-  startTime: "3 PM EST",
-  topics: [
-    "WILL ANDREW HOLNESS' SEAT BE VACANT AFTER FEBRUARY 10, 2027?",
-    "THE HISTORY, ROLE, AND EFFECT OF THE PUBLIC ACCOUNTS COMMITTEE",
-    "PARLIAMENT AND THE U.N. CUBAN VOTE DEBACLE",
-  ],
-  watchUrl: "https://www.youtube.com/live/yUlDj9Jv1Lc",
+  mode: "live",
+  title: "Come Reason With Rattigan",
+  date: "2026-11-11",
+  startTime: "8 PM EST",
+  topics: ["BASICS OF STANDING ORDERS: SESSION UNDERWAY. MEMBERS OF PARLIAMENT, KINDLY BE PRESENT."],
+  watchUrl: "https://www.youtube.com/live/GWWrLI9MAkM?si=kbgyFqjPq9O5PQwC",
 };
