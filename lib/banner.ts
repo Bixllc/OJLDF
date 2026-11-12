@@ -20,7 +20,7 @@ export type ShowBanner = {
 };
 
 export const SHOW_BANNER: ShowBanner = {
-  mode: "live",
+  mode: "recap" as ShowBanner["mode"],
   title: "Come Reason With Rattigan",
   date: "2026-11-11",
   startTime: "8 PM EST",
